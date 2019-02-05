@@ -27,7 +27,7 @@ class Model_productos extends CI_Model {
      * Saca los nombres de todas las categorias
      * @return type
      * visible=1 --> visible ok
-     * visible =0 --> no visible 
+     * visible =0 --> no visible a
      */
     public function getCategorias() {
         $query = $this->db->query('select * from categorias where visible=1');
@@ -36,14 +36,14 @@ class Model_productos extends CI_Model {
 
 //saca productos por categorias
     public function getProductosPorCategoria($catId) {
-
+ 
         $query = $this->db->query("select * from producto where categoria_id='$catId' and visible=1");
         $producto = $query->result();
         return $producto;
     }
     public function categoriaNombre($id)
     {
-        $query  = "select nombre from categoria where categoria_id=" . $id . "";
+        $query  = "select nombre from categorias where categoria_id=" . $id . "";
         $nomCategoria = $this->db->query($query);
         return $nombreCategoria->row()->nombre;
     }
