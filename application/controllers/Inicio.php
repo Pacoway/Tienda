@@ -5,9 +5,21 @@ class Inicio extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->helper('url');
-		$datos['titulo'] = 'Inicio';
-        $datos['menu'] = $this->load->view('menu');
-		$this->load->view('plantilla', $datos);
+		$this->load->view('plantilla', [
+			'titulo' => 'Inicio',
+			'menu' => $this->load->view('menu',[],true),
+			'cuerpo' => $this->load->view('Inicio',[],true)
+ 		]
+	);
+	}
+
+	public function mostrarCategorias(){
+		$this->load->model('Model_productos');
+		$this->load->view('plantilla', [
+			'titulo' => 'Inicio',
+			'menu' => $this->load->view('menu',[],true),
+			'cuerpo' => $this->load->view('Inicio',[],true)
+ 		]
+	);
 	}
 }
