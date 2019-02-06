@@ -13,6 +13,6 @@
 </head>
 <body>
     <div id="menu"><?= isset($menu) ? $menu : "" ?></div>
-    <div id="cuerpo"><?= $cuerpo ?></div>
+    <div class="container"><?= $cuerpo ?></div>
 </body>
 </html>
