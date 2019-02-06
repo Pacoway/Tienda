@@ -27,7 +27,7 @@ class Model_productos extends CI_Model {
      * Saca los nombres de todas las categorias
      * @return type
      * visible=1 --> visible ok
-     * visible =0 --> no visible a
+     * visible =0 --> no visible
      */
     public function getCategorias() {
         $query = $this->db->query('select * from categorias where visible=1');
