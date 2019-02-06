@@ -60,4 +60,14 @@ class Model_productos extends CI_Model {
         $this->db->insert('categoria', $datos);
     }
 
+    public function productosDestacados() //importate PAGINAR
+    {//$desde, $por_pagina pendientes de pasar por parametros a la función para cuando pagine
+       // $query  = ("select * from producto where destacado=1 and visible=1 and finicio_dest<=CURDATE() and ffin_dest>=CURDATE() LIMIT $desde,$por_pagina");
+        $query  = ("select * from producto where destacado=1 and visible=1 and finicio_dest<=CURDATE() and ffin_dest>=CURDATE()");
+
+        $prodes = $this->db->query($query);
+        return $prodes->result();//No usar result array, si en la vista quiero usar un foreach normalito
+        //return $prodes->result_array();
+    }
+
 }
