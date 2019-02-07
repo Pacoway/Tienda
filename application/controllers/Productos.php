@@ -14,36 +14,36 @@ class Productos extends CI_Controller {
         'titulo'=>'productos',
         'menu'=>  $this->load->view('menu', $datos_categorias, true),
         'cuerpo'=>$this->load->view('listado_articulos',  $datos_vista, true),
-        ]);
+        ]
+    );
     }
 
     public function mostrarCategorias($id_categoria){
         $this->load->model('model_productos');
         $datos_categorias['categorias']= $this->model_productos-> getCategorias();
         $datos_vista['productos']= $this->model_productos->getProductosPorCategoria($id_categoria);
-		$this->load->view('plantilla', [
-			'titulo' => 'Inicio',
+        
+        $this->load->view('plantilla', [
+            'titulo' => 'Categorias',
 			'menu'=>  $this->load->view('menu', $datos_categorias, true),
 			'cuerpo' => $this->load->view('ListaArticulos',$datos_vista, true)
  		]
 	);
 	}
     
-    public function mostrarDetalle($prodId)
-	{
+    public function mostrarDetalles($prodId){
         $this->load->model('model_productos');//cargo el modelo
         
-        $datos_h2['h2Inicial']= $this->model_productos->descripcionProducto($prodId);
         $datos_vista['productos']= $this->model_productos-> getProducto($prodId);
         $datos_menu['categorias']= $this->model_productos-> getCategorias();
         $datos_titulo['titulo']= $this->model_productos->productoNombre($prodId);
-        
-        $this->load->view('plantilla', [
-        'titulo'=>$datos_titulo,
-        'menu'=>  $this->load->view('menu', $datos_menu, true),
-        'h2Inicial'=>$this->load->view('detalleProducto',  $datos_h2, true),
-        'cuerpo'=>$this->load->view('detalleProducto',  $datos_vista, true),
-         ]);
-        }
+ 
+        $this->load->view('Plantilla', [
+            'titulo' => $datos_titulo['titulo'],
+            'menu'=>  $this->load->view('menu', $datos_menu, true),
+            'cuerpo'=>$this->load->view('detalleProducto',  $datos_vista, true),
+        ]
+    );
+    }
 
 }

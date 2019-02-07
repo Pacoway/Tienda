@@ -20,10 +20,12 @@ class Model_productos extends CI_Model {
     public function productosDestacados() //importate PAGINAR
     {//$desde, $por_pagina pendientes de pasar por parametros a la función para cuando pagine
      // $query  = ("select * from producto where destacado=1 and visible=1 and finicio_dest<=CURDATE() and ffin_dest>=CURDATE() LIMIT $desde,$por_pagina");
-        $query  = ("select * from producto where destacado=1 and visible=1 and finicio_dest<=CURDATE() and ffin_dest>=CURDATE()");
-
-        $prodes = $this->db->query($query);
-        return $prodes->result();//No usar result array, si en la vista quiero usar un foreach normalito
+        $rs = $this->db
+        ->from('producto')
+        ->where('destacado', 1)
+        ->where('visible', 1)
+        ->get();
+        return $rs->result();//No usar result array, si en la vista quiero usar un foreach normalito
         //return $prodes->result_array();
     }
 
@@ -34,37 +36,39 @@ class Model_productos extends CI_Model {
      * @return type
      */
     public function getProducto($prodId) {
-        $this->db->where('producto_id', $prodId);
+        $rs = $this->db
+        ->from('producto')
+        ->where('producto_id', $prodId)
+        ->get();
+
+
         $produ = $this->db->get('producto');
-        return $produ;
+        return $rs->result();
     }
     
-    /**
-     * Devuelve la descrición del producto seleccionado
-     * @param type $prodId
-     * @return type
-     */
     public function descripcionProducto($prodId){
-        $query  = ("select descripcion from producto where producto_id=$prodId");
-        $proDes = $this->db->query($query);
-        return $proDes ->result();
-    }
-    /**
-     * Devuelve el Nombre del producto seleccionado
-     * @param type $prodId
-     * @return type
-     */
-    public function productoNombre($prodId){
-        //$query  = ("select nombre from producto where producto_id=$prodId");
-        //$rs = $this->db->query($query);
-
         $rs = $this->db
-                ->select('nombre')
-                ->from('producto')
-                ->where('producto_id', $producto_id)
-                ->get();
+            ->select('descripcion')
+            ->from('producto')
+            ->where('producto_id', $prodId)
+            ->get();
 
-        
+        $reg= $rs->row();
+        if ($reg) {
+            return $reg->descripcion;
+        }
+        else {
+            return '';
+        }
+    }
+
+    public function productoNombre($prodId){
+        $rs = $this->db
+            ->select('nombre')
+            ->from('producto')
+            ->where('producto_id', $prodId)
+            ->get();
+    
         $reg= $rs->row();
         if ($reg) {
             return $reg->nombre;
@@ -82,34 +86,49 @@ class Model_productos extends CI_Model {
      * visible =0 --> no visible 
      */
     public function getCategorias() {
-        $query = $this->db->query('select * from categorias where visible=1');
-        return $query->result();
+        $rs = $this->db
+        ->from('categorias')
+        ->where('visible', 1)
+        ->get();
+        return $rs->result();
     }
 
 //saca productos por categorias
     public function getProductosPorCategoria($catId) {
      
-        $query = $this->db->query("select * from producto where categoria_id='$catId' and visible=1");
-        $productos = $query->result();
-        return $productos;
+        $rs = $this->db
+        ->from('producto')
+        ->where('categoria_id', $catId)
+        ->where('visible', 1)
+        ->get();
+
+        return $rs->result();
     }
-    public function categoriaNombre($id)
-    {
-        $query  = "select nombre from categorias where categoria_id='$id'";
-        $nomCategoria = $this->db->query($query);
-        return$nomCategoria->row()->nombre;
-       //return $nomCategoria;
+    public function categoriaNombre($id){
+        $rs = $this->db
+        ->select('nombre')
+        ->from('categorias')
+        ->where('categoria_id', $id)
+        ->get();
+
+        $reg= $rs->row();
+        if ($reg) {
+            return $reg->nombre;
+        }
+        else {
+            return '';
+        }
     }
+
    /**
-    * Función que me devuelval la descripción del contenido de una categoria
+    * Función que me devuelva la descripción del contenido de una categoria
     * 
     */
     public function descripcionCategoria($id){
         $this->db->where('categoria_id',$id);
         $consulta=$this->db->get('categorias');
         return $consulta;
-    }
-    
+    }    
 
 //crea una nueva categoria
     public function insertCategoria($id, $nombre, $descripcion, $anuncio, $visible) {
