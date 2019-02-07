@@ -1,10 +1,10 @@
 <div class="row">
     <?php foreach ($productos as $row) :?>
-    <tr class="row">
-        <td><img src="<?=base_url().'img/portatilroto.jpg'?>" alt="" class="img-fluid mr-3" height="211" width="100"></td><br>
-        <td> <?= $row->nombre ?><br>
-        <td><?= $row->precio ?></td><br>
-        <td><button>Al carrito</button ></td>
-    </tr>
+    <table class="table-borderless col-md-4" >
+        <tr><td><img src="<?=base_url().'img/'.$row->imagen?>" alt="" class="img-fluid" style="width: 30%;height: 30%;"><td></tr>
+        <tr><td> <?= $row->nombre ?></td></tr>
+        <tr><td><?= $row->precio ?></td></tr>
+        <tr><td><button>Al carrito</button ></td></tr>
+        </table>
     <?php endforeach;?>
 </div>
