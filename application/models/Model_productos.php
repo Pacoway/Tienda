@@ -58,10 +58,6 @@ class Model_productos extends CI_Model {
         //$query  = ("select nombre from producto where producto_id=$prodId");
         //$rs = $this->db->query($query);
 
-        $this->db->select('nombre');
-        $this->db->from('producto');
-        $this->db->where('producto_id', $producto_id);
-
         $rs = $this->db
                 ->select('nombre')
                 ->from('producto')
