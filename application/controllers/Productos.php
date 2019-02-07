@@ -29,4 +29,21 @@ class Productos extends CI_Controller {
 	);
 	}
     
+    public function mostrarDetalle($prodId)
+	{
+        $this->load->model('model_productos');//cargo el modelo
+        
+        $datos_h2['h2Inicial']= $this->model_productos->descripcionProducto($prodId);
+        $datos_vista['productos']= $this->model_productos-> getProducto($prodId);
+        $datos_menu['categorias']= $this->model_productos-> getCategorias();
+        $datos_titulo['titulo']= $this->model_productos->productoNombre($prodId);
+        
+        $this->load->view('plantilla', [
+        'titulo'=>$datos_titulo,
+        'menu'=>  $this->load->view('menu', $datos_menu, true),
+        'h2Inicial'=>$this->load->view('detalleProducto',  $datos_h2, true),
+        'cuerpo'=>$this->load->view('detalleProducto',  $datos_vista, true),
+         ]);
+        }
+
 }
