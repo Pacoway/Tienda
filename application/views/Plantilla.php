@@ -12,7 +12,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <div id="menu"><?= isset($menu) ? $menu : "" ?></div>
-    <div class="container"><?= $cuerpo ?></div>
+    <div id="menu col-md-12"><?= isset($menu) ? $menu : "" ?></div>
+    <div class="container col-md-12"><?= $cuerpo ?></div>
 </body>
 </html>

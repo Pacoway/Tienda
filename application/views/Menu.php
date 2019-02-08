@@ -1,3 +1,14 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark float-right">
+    <ul class="navbar-nav float-right">
+        <?php if ($this->session->userdata('usuario')) :?>
+        <li class="nav-item"></li>
+              
+        <?php else : ?>
+        <li class="nav-item"> <a class="nav-link" href="<?= site_url().'/InicioSesion'?>"> Iniciar sesión</a></li>
+        <li class="nav-item"> <a class="nav-link" href="<?= site_url().'/Registrarse'?>"> Registrarse</a></li>
+        <?php endif; ?>
+    </ul>
+</nav>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="<?= site_url().'/Inicio'?>">Inicio</a></li>
@@ -9,6 +20,5 @@
                     <?php endforeach; ?>   
                 </div>
         </li>
-       
-    </ul>
+    </ul> 
 </nav>

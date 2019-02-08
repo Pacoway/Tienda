@@ -12,8 +12,6 @@
         <tr><td>stock</td><td> <?= $row->stock ?></td></tr>
         <tr><td>visible</td><td> <?= ($row->visible) ? 'Si' : 'No' ?></td></tr>
         <tr><td>destacado</td><td> <?= ($row->destacado) ? 'Si' : 'No' ?></td></tr>
-        <tr><td>fecha_inicio_destacado</td><td> <?= $row->fecha_inicio_destacado ?></td></tr>
-        <tr><td>fecha_fin_destacado</td><td><?= $row->fecha_fin_destacado ?></td></tr>
         <tr><td><a href="<?= site_url().'/Productos/mostrarCategorias/'.$row->categoria_id?>"><button>Volver atras</button ></a></td><td><button>Al carrito</button ></td></tr>
         </table>
     <?php endforeach;?>
