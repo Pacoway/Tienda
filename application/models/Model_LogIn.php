@@ -27,6 +27,12 @@ class Model_Login extends CI_Model {
     }
     
     public function registroUsuario($nombre_usuario, $contraseña, $email, $nombre, $apellidos, $dni, $direccion, $provincia){
+        $id_provincia = $this->db
+        ->select('provincia_id')
+        ->from('provincias')
+        ->where('nombre', $provincia)
+        ->get();
+        
         $datosUsuario = array(
             'usuario_id' => null,
             'nombre_usuario' => $nombre_usuario,
@@ -36,7 +42,7 @@ class Model_Login extends CI_Model {
             'apellidos' => $apellidos,
             'dni' => $dni,
             'direccion' => $direccion,
-            'provincia_id' => $provincia
+            'provincia_id' => $id_provincia->row()->provincia_id
     );
     
     $this->db->insert('usuario', $datosUsuario);

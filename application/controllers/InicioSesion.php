@@ -19,7 +19,8 @@ class InicioSesion extends CI_Controller {
 		$this->load->model('model_productos');
 		$this->load->model('model_Login');
 
-		//añadir aqui set rules de form validation
+		$this->form_validation->set_rules('usuario', 'Usuario', 'required');
+		$this->form_validation->set_rules('contrasena', 'Contraseña', 'required');
 
 		if ($this->model_Login->LogOK($this->input->post('usuario'), $this->input->post('contrasena'))& $this->form_validation->run() == TRUE) {			
 
@@ -35,12 +36,15 @@ class InicioSesion extends CI_Controller {
 			 ]);
 
 		} else {
-			
+			$errormsg= "";
+			if ($this->form_validation->run() == TRUE) {
+				$errormsg= "Error en usuario o contraseña";
+			}
 			$datos_categorias['categorias']= $this->model_productos->getCategorias();
 			$this->load->view('plantilla', [
 				'titulo' => 'Inicio de sesion',
 				'menu'=>  $this->load->view('menu', $datos_categorias, true),
-				'cuerpo' => $this->load->view('InicioSesion',[],true)
+				'cuerpo' => $this->load->view('InicioSesion',['error'=> $errormsg],true)
 			 ]);
 		}
 		
@@ -53,6 +57,7 @@ class InicioSesion extends CI_Controller {
 		$this->session->unset_userdata('nombre');
 		$this->session->unset_userdata('administrador');
 
+        $datos_categorias['categorias']= $this->model_productos->getCategorias();
 		$this->load->view('plantilla', [
 			'titulo' => 'Inicio de sesion',
 			'menu'=>  $this->load->view('menu', $datos_categorias, true),

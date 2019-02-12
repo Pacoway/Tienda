@@ -1,4 +1,5 @@
 <?php echo validation_errors(); ?>
+<?= (isset($error))? $error:''; ?>
 <?php echo form_open('InicioSesion/LogIn'); ?>
 <h2>Iniciar sesión</h2>
 <h5>Usuario</h5>

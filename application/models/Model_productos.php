@@ -41,8 +41,6 @@ class Model_productos extends CI_Model {
         ->where('producto_id', $prodId)
         ->get();
 
-
-        $produ = $this->db->get('producto');
         return $rs->result();
     }
     

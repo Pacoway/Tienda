@@ -1,5 +1,5 @@
 <?php echo validation_errors(); ?>
-<?php echo form_open('formulario'); ?>
+<?php echo form_open('RegistroUsuario'); ?>
 <h5>Usuario</h5>
 <input type="text" name="nombre_usuario" value="" size="50" />
 <h5>Contraseña</h5>

@@ -12,7 +12,12 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <div id="menu col-md-12"><?= isset($menu) ? $menu : "" ?></div>
+    <?php 
+    $ci=get_instance();
+    $menu = $this->load->view('menu', $ci->model_productos->getCategorias(), true);
+    ?>
+    
+    <div id="menu col-md-12"><?= $menu ?></div>
     <div class="container col-md-12"><?= $cuerpo ?></div>
 </body>
 </html>
