@@ -9,6 +9,7 @@
         <li class="nav-item"> <a class="nav-link" href="<?= site_url().'/InicioSesion'?>"> Iniciar sesión</a></li>
         <li class="nav-item"> <a class="nav-link" href="<?= site_url().'/RegistroUsuario'?>"> Registrarse</a></li>
         <?php endif; ?>
+        <li class="nav-item"> <a class="nav-link" href="<?= site_url().'/Productos/verCarrito'?>"> Carrito</a></li>
     </ul>
 </nav>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">

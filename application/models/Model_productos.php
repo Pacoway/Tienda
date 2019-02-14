@@ -41,7 +41,7 @@ class Model_productos extends CI_Model {
         ->where('producto_id', $prodId)
         ->get();
 
-        return $rs->result();
+        return $rs->row();
     }
     
     public function descripcionProducto($prodId){

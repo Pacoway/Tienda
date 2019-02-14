@@ -5,7 +5,7 @@
         <tr><td> <?= $row->nombre ?></td></tr>
         <tr><td><?= $row->precio ?></td></tr>
         <tr><td><a href="<?= site_url().'/Productos/mostrarDetalles/'.$row->producto_id ?>"><button>Mostrar detalles</button ></a></td></tr>
-        <tr><td><button>Al carrito</button ></td></tr>
+        <tr><td><a class="btn btn-info" href="<?=site_url().'/Productos/addProducto/'.$row->producto_id?>">Al carrito</a ></td></tr>
         </table>
     <?php endforeach;?>
     
