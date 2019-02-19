@@ -15,8 +15,8 @@
 <body>
     <?php 
     
-    $this->load->model('model_productos');
-    $datos_categorias['categorias']= $this->model_productos-> getCategorias();
+    $this->load->model('Model_productos');
+    $datos_categorias['categorias']= $this->model_productos->getCategorias();
     $menu = $this->load->view('Menu', $datos_categorias, true);
     ?>
     
