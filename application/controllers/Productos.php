@@ -88,4 +88,13 @@ class Productos extends CI_Controller {
         $this->verCarrito();
     }
 
+    //Administracion de articulos
+    public function administrarProductos(){
+        $this->load->model('model_productos');
+        $productos['productos']= $this->model_productos->getProductos();
+        $this->load->view('plantilla', [
+            'titulo' => 'Administrar Productos',
+	    	'cuerpo' => $this->load->view('AdministrarProductos',$datos_vista, true)
+ 		]);
+    }
 }
