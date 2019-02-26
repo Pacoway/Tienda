@@ -44,6 +44,8 @@ class Model_productos extends CI_Model {
         return $rs->row();
     }
     
+
+
     public function descripcionProducto($prodId){
         $rs = $this->db
             ->select('descripcion')

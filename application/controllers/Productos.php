@@ -5,28 +5,28 @@ class Productos extends CI_Controller {
 
 
     public function index(){
-        $this->load->model('model_productos');
-        $datos_vista['productos']= $this->model_productos-> productosDestacados();
+        $this->load->model('Model_productos');
+        $datos_vista['productos']= $this->Model_productos-> productosDestacados();
      
        //cargo la vista pasando los datos de configuacion
-        $this->load->view('plantilla', [
+        $this->load->view('Plantilla', [
         'titulo'=>'productos',
          'cuerpo'=>$this->load->view('listado_articulos',  $datos_vista, true),
         ]);
     }
 
     public function mostrarCategorias($id_categoria){
-        $this->load->model('model_productos');
-        $datos_vista['productos']= $this->model_productos->getProductosPorCategoria($id_categoria);
+        $this->load->model('Model_productos');
+        $datos_vista['productos']= $this->Model_productos->getProductosPorCategoria($id_categoria);
         
-        $this->load->view('plantilla', [
+        $this->load->view('Plantilla', [
             'titulo' => 'Categorias',
 	    	'cuerpo' => $this->load->view('ListaArticulos',$datos_vista, true)
  		]);
 	}
     
     public function mostrarDetalles($prodId){
-        $this->load->model('model_productos');//cargo el modelo
+        $this->load->model('Model_productos');//cargo el modelo
         
         $datos_vista['productos']= $this->Model_productos->getProducto($prodId);
         $datos_titulo['titulo']= $this->Model_productos->productoNombre($prodId);
@@ -39,12 +39,12 @@ class Productos extends CI_Controller {
     }
 
     public function verCarrito() {
-        $this->load->model('model_productos'); //cargo el modelo
+        $this->load->model('Model_productos'); //cargo el modelo
         $this->load->library('cart');
 
         $datos['productosCarrito'] = $this->cart->contents();
     
-        $this->load->view('plantilla', [
+        $this->load->view('Plantilla', [
             'titulo' => 'confirmar pedido',            
             'cuerpo' => $this->load->view('Carrito', $datos, true),]);
     }
@@ -90,9 +90,9 @@ class Productos extends CI_Controller {
 
     //Administracion de articulos
     public function administrarProductos(){
-        $this->load->model('model_productos');
-        $productos['productos']= $this->model_productos->getProductos();
-        $this->load->view('plantilla', [
+        $this->load->model('Model_productos');
+        $productos['productos']= $this->Model_productos->getProductos();
+        $this->load->view('Plantilla', [
             'titulo' => 'Administrar Productos',
 	    	'cuerpo' => $this->load->view('AdministrarProductos',$datos_vista, true)
  		]);

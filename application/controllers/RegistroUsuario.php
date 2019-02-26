@@ -4,10 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class RegistroUsuario extends CI_Controller {
 
 	public function index(){
-        $this->load->model('model_productos');
         $this->load->model('Model_Provincias');
         $this->load->model('Model_Login');
-        $datos_categorias['categorias']= $this->model_productos->getCategorias();
         $datos_provincias['provincias'] = $this->Model_Provincias->getProvincias();
 
         $this->form_validation->set_rules('nombre_usuario', 'nombre_usuario', 'required');
@@ -26,15 +24,13 @@ class RegistroUsuario extends CI_Controller {
 			$this->session->set_userdata('nombre', $this->Model_Login->getNombre($this->input->post('nombre_usuario')));
 			$this->session->set_userdata('administrador', $this->Model_Login->getAdmin($this->input->post('nombre_usuario')));
 
-            $this->load->view('plantilla', [
+            $this->load->view('Plantilla', [
                 'titulo' => 'Registro con éxito',
-                'menu'=>  $this->load->view('Menu', $datos_categorias, true),
                 'cuerpo' => $this->load->view('RegistroCompletado',[],true)
             ]);
         } else {   
-            $this->load->view('plantilla', [
+            $this->load->view('Plantilla', [
                 'titulo' => 'Registrar usuario',
-                'menu'=>  $this->load->view('Menu', $datos_categorias, true),
                 'cuerpo' => $this->load->view('RegistroUsuario',$datos_provincias, true)
             ]);
         }

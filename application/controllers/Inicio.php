@@ -5,12 +5,11 @@ class Inicio extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->model('model_productos');
-        $datos_categorias['categorias']= $this->model_productos->getCategorias();
+        $this->load->model('Model_productos');
+        $datos_categorias['categorias']= $this->Model_productos->getCategorias();
 
-		$this->load->view('plantilla', [
+		$this->load->view('Plantilla', [
 			'titulo' => 'Inicio',
-			'menu'=>  $this->load->view('menu', $datos_categorias, true),
 			'cuerpo' => $this->load->view('Inicio',[],true)
  		]
 	);
