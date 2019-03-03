@@ -21,6 +21,6 @@
     ?>
     
     <div id="menu col-md-12"><?= $menu ?></div>
-    <div class="container col-md-12"><?= $cuerpo ?></div>
+    <div class="container col-md-10 justify-content-center"><?= $cuerpo ?></div>
 </body>
 </html>

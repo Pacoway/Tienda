@@ -1,7 +1,8 @@
 <h2>Detalles del producto</h2>
-<div class="row">
+
+<div class="row ">
 <?php echo form_open('Productos/addProducto/'.$productos->producto_id.'/True'); ?>
-    <table class="table col-md-10" >      
+    <table class="table" >      
         <tr><td><img src="<?=base_url().'img/'.$productos->imagen?>" alt="" class="img-fluid" style="width: 50%;height: 50%;"><td></tr>
         <tr><td>producto_id</td><td> <?= $productos->producto_id ?></td></tr> 
         <tr><td>precio</td><td> <?= $productos->precio.'€' ?></td></tr>
@@ -22,9 +23,13 @@
         ?>
         </select>
         </td></tr>
-        <tr><td><a href="<?= site_url().'/Productos/mostrarCategorias/'.$productos->categoria_id?>"><button>Volver atras</button ></a></td><td><input class="btn btn-info" type="submit" value="Añadir al carrito"/></td></tr>
+        <tr><td><input class="btn btn-info" type="submit" value="Añadir al carrito"/></td></tr>
 
        </table>
+
     </form>
+
+   
     
 </div>
+<a class="float-left" href="<?= site_url().'/Productos/mostrarCategorias/'.$productos->categoria_id?>"><button>Volver a la categoria</button></a>

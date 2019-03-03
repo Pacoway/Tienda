@@ -10,3 +10,9 @@
     <?php endforeach;?>
     
 </div>
+
+<div class="row col-md-12">
+        <div class="mx-auto">
+            <p><?=$pag?></p>
+        </div> 
+</div>

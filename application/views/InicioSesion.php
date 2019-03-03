@@ -1,3 +1,4 @@
+<div class="justify-content-center">
 <?php echo validation_errors(); ?>
 <?= (isset($error))? $error:''; ?>
 <?php echo form_open('InicioSesion/LogIn'); ?>
@@ -9,3 +10,4 @@
 
 <div><input type="submit" value="Iniciar sesion" /></div>
 </form>
+</div>

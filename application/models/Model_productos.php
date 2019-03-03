@@ -17,7 +17,8 @@ class Model_productos extends CI_Model {
      * Devuelve los productos detacados siempre y cuando las fechas coincidan
      * @return type
      */
-    public function productosDestacados() //importate PAGINAR
+   
+   /*  public function productosDestacados() //importate PAGINAR
     {//$desde, $por_pagina pendientes de pasar por parametros a la función para cuando pagine
      // $query  = ("select * from producto where destacado=1 and visible=1 and finicio_dest<=CURDATE() and ffin_dest>=CURDATE() LIMIT $desde,$por_pagina");
         $rs = $this->db
@@ -27,6 +28,36 @@ class Model_productos extends CI_Model {
         ->get();
         return $rs->result();//No usar result array, si en la vista quiero usar un foreach normalito
         //return $prodes->result_array();
+    }*/
+
+    public function productosDestacados($desde, $por_pagina) { 
+        // $query  = ("select * from producto where destacado=1 and visible=1 and finicio_dest<=CURDATE() and ffin_dest>=CURDATE() LIMIT $desde,$por_pagina");
+        $query = ("select * from producto where destacado=1 and visible=1 LIMIT $desde,$por_pagina");
+
+        $prodes = $this->db->query($query);
+        return $prodes->result(); 
+        //return $prodes->result_array();
+    }
+
+  
+    public function numeroDestacados(){
+            $query = "select * from producto where destacado=1 and visible=1";
+            $npro  = $this->db->query($query);
+            return $npro->num_rows();
+    }
+
+    public function getProductosPorCategoriaPaginados($catId, $desde, $por_pagina) {
+
+        $query = $this->db->query("select * from producto where categoria_id='$catId' and visible=1 LIMIT $desde,$por_pagina");
+        $productos = $query->result();
+        return $productos;
+    }
+    
+    public function numeroProductosPorCategoria($catId) {
+
+        $query = ("select * from producto where categoria_id='$catId' and visible=1");
+        $numProductos = $this->db->query($query);
+        return $numProductos->num_rows();
     }
 
 //

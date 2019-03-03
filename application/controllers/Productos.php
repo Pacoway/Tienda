@@ -4,14 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Productos extends CI_Controller {
 
 
-    public function index(){
+   /* public function index(){
         $this->load->model('Model_productos');
         $datos_vista['productos']= $this->Model_productos-> productosDestacados();
      
        //cargo la vista pasando los datos de configuacion
         $this->load->view('Plantilla', [
         'titulo'=>'productos',
-         'cuerpo'=>$this->load->view('listado_articulos',  $datos_vista, true),
+         'cuerpo'=>$this->load->view('Listado_articulos',  $datos_vista, true),
         ]);
     }
 
@@ -23,7 +23,53 @@ class Productos extends CI_Controller {
             'titulo' => 'Categorias',
 	    	'cuerpo' => $this->load->view('ListaArticulos',$datos_vista, true)
  		]);
-	}
+    }*/
+    
+    public function index($desde=0) {
+        // $this->load->helper('url');
+        $this->load->library('pagination');
+        $this->load->model('Model_productos');
+        
+        $config['base_url'] = base_url() . 'index.php/Productos/index/';
+      
+        $config['total_rows'] = $this->Model_productos->numeroDestacados();
+     
+        $config['per_page'] = '3';
+       
+        // $config['uri_segment'] = '3';// al tres está por defecto por eso puedo lo puedo comentar
+        
+        $this->pagination->initialize($config);    
+        $datos['h2Inicial'] = 'Productos destacados';
+        $datos['productos'] = $this->Model_productos->productosDestacados($desde, $config['per_page']);
+        $datos['pag']= $this->pagination->create_links();
+        
+     
+        $this->load->view('Plantilla', [
+            'titulo' => 'productos destacados',
+            'cuerpo' => $this->load->view('ListaArticulos', $datos, true),
+        ]);
+    }
+
+    public function mostrarCategorias($catId, $desde=0) {
+  
+        $this->load->model('Model_productos');
+        $this->load->library('pagination');       
+        $config['base_url'] = base_url() . 'index.php/Productos/mostrarCategorias/'.$catId;
+        $config['total_rows'] = $this->Model_productos->numeroProductosPorCategoria($catId);
+        $config['per_page'] = '3';
+        $config['uri_segment'] = '4';
+        
+        $this->pagination->initialize($config);
+        $datos['titulo'] = $this->Model_productos->categoriaNombre($catId);
+        $datos['h2Inicial'] = $this->Model_productos->descripcionCategoria($catId);
+        $datos['productos'] = $this->Model_productos->getProductosPorCategoriaPaginados($catId, $desde, $config['per_page']);
+        $datos['pag']= $this->pagination->create_links();
+        
+        $this->load->view('Plantilla', [
+            'titulo' => $datos['titulo'],
+            'cuerpo' => $this->load->view('ListaArticulos', $datos, true),
+        ]);
+    }
     
     public function mostrarDetalles($prodId){
         $this->load->model('Model_productos');//cargo el modelo
