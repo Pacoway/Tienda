@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark float-right">
     <ul class="navbar-nav float-right">
         <?php if ($this->session->userdata('usuario_id')) :?>
-        <li class="nav-item"> <a class="nav-link" href="<?= site_url().'/PerfilUsuario'?>"> Bienvenido <?= $this->session->nombre ?></a></li>
+        <li class="nav-item"> <a class="nav-link" href="<?= site_url().'/PerfilUsuario' ?>"> Bienvenido <?= $this->session->nombre ?></a></li>
         <li class="nav-item"> <a class="nav-link" href="<?= site_url().'/InicioSesion/LogOut'?>"> Cerrar Sesión</a></li>
        
               

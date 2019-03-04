@@ -28,8 +28,6 @@
        </table>
 
     </form>
-
-   
     
 </div>
 <a class="float-left" href="<?= site_url().'/Productos/mostrarCategorias/'.$productos->categoria_id?>"><button>Volver a la categoria</button></a>

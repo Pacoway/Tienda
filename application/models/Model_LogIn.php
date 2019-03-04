@@ -25,6 +25,23 @@ class Model_Login extends CI_Model {
             return false;
         }
     }
+
+    public function compruebaContrasena($contrasena){
+
+         $rs = $this->db
+            ->select('contraseña')
+            ->from('usuario')
+            ->where('contraseña', $contrasena)
+            ->get();
+
+        $reg= $rs->row();
+        if ($reg) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
     
     public function registroUsuario($nombre_usuario, $contraseña, $email, $nombre, $apellidos, $dni, $direccion, $provincia){
         $id_provincia = $this->db
@@ -101,4 +118,38 @@ class Model_Login extends CI_Model {
             return '';
         }
     }
+
+    public function getUsuario($usuario_id){
+        $rs = $this->db
+        ->from('usuario')
+        ->where('usuario_id', $usuario_id)
+        ->get();
+
+        return $rs->row();
+    }
+
+    public function modificarDatosUsuario($nombre, $apellidos, $direccion, $usuario_id){
+        $data = array(
+            'nombre' => $nombre,
+            'apellidos' => $apellidos,
+            'direccion' => $direccion
+    );
+    
+    $this->db->where('usuario_id', $usuario_id);
+    $this->db->update('usuario', $data);
+    }
+
+    public function modificarContrasena($contrasena,$usuario_id){
+        $data = array(
+            'contraseña' => $contrasena,
+    );
+    
+    $this->db->where('usuario_id', $usuario_id);
+    $this->db->update('usuario', $data);
+    }
+
+    public function darDeBaja($usuario_id){
+        $this->db->delete('usuario', array('usuario_id' => $usuario_id));
+    }
+
 }

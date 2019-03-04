@@ -2,41 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Productos extends CI_Controller {
-
-
-   /* public function index(){
-        $this->load->model('Model_productos');
-        $datos_vista['productos']= $this->Model_productos-> productosDestacados();
-     
-       //cargo la vista pasando los datos de configuacion
-        $this->load->view('Plantilla', [
-        'titulo'=>'productos',
-         'cuerpo'=>$this->load->view('Listado_articulos',  $datos_vista, true),
-        ]);
-    }
-
-    public function mostrarCategorias($id_categoria){
-        $this->load->model('Model_productos');
-        $datos_vista['productos']= $this->Model_productos->getProductosPorCategoria($id_categoria);
-        
-        $this->load->view('Plantilla', [
-            'titulo' => 'Categorias',
-	    	'cuerpo' => $this->load->view('ListaArticulos',$datos_vista, true)
- 		]);
-    }*/
     
     public function index($desde=0) {
-        // $this->load->helper('url');
         $this->load->library('pagination');
         $this->load->model('Model_productos');
         
-        $config['base_url'] = base_url() . 'index.php/Productos/index/';
-      
-        $config['total_rows'] = $this->Model_productos->numeroDestacados();
-     
-        $config['per_page'] = '3';
-       
-        // $config['uri_segment'] = '3';// al tres está por defecto por eso puedo lo puedo comentar
+        $config['base_url'] = base_url() . 'index.php/Productos/index/';    
+        $config['total_rows'] = $this->Model_productos->numeroDestacados();     
+        $config['per_page'] = '6';      
+        $config['uri_segment'] = '3';
         
         $this->pagination->initialize($config);    
         $datos['h2Inicial'] = 'Productos destacados';
