@@ -19,10 +19,10 @@
             <tr>
             <td><img src="<?=base_url().'img/'.$row['imagen']?>"  height="50px" width="50px"></td>
             <td><b><?= $row['name'] ?></b></td>
-            <td><b><?= $row['descuento'] ?></b></td>
+            <td><b><?= $row['descuento'] ?>%</b></td>
             <td><b><?= $row['qty']?></b></td>
-            <td><b><?= $row['price'] ?></b></td>
-            <td><b><?= ($row['price']*$row['qty']) ?></b></td>
+            <td><b><?= $row['price'] ?>€</b></td>
+            <td><b><?= ($row['price'] )*$row['qty'] ?>€</b></td>
             <td><a href="<?= site_url().'/Productos/eliminarProducto/'.$row['rowid']?>"><b>Quitar</b> &nbsp<i class="fas fa-times"></i></a></td>
         </tr>
         <?php endforeach;?>
