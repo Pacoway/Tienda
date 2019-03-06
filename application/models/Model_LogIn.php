@@ -19,7 +19,9 @@ class Model_Login extends CI_Model {
 
         $reg= $rs->row();
         if ($reg) {
-            return true;
+            if (password_verify($contraseña,$reg->contraseña )) {
+                return true;
+            }
         }
         else {
             return false;
@@ -53,7 +55,7 @@ class Model_Login extends CI_Model {
         $datosUsuario = array(
             'usuario_id' => null,
             'nombre_usuario' => $nombre_usuario,
-            'contraseña' => $contraseña,
+            'contraseña' => password_hash($contraseña, PASSWORD_DEFAULT),
             'email' => $email,
             'nombre' => $nombre,
             'apellidos' => $apellidos,
