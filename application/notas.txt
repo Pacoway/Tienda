@@ -26,3 +26,5 @@
 ⦁	Documentacion
 
 perfilusuario else modificar
+
+controlador productos linea 140 (comentada)

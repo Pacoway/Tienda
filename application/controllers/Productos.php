@@ -95,7 +95,7 @@ class Productos extends CI_Controller {
     public function vaciarCarrito(){
         $this->load->library ( 'cart' );
         $this->cart->destroy();
-        $this->verCarrito();
+       // $this->verCarrito();
     }
         
     public function eliminarProducto($rowid) { 
@@ -117,4 +117,43 @@ class Productos extends CI_Controller {
 	    	'cuerpo' => $this->load->view('AdministrarProductos',$datos_vista, true)
  		]);
     }
+
+    public function tramitarPedido(){
+        $this->load->model('Model_productos'); //cargo el modelo
+        $this->load->model('Model_Login');
+        $this->load->library('cart');
+
+        $cesta=$this->cart->contents();
+        if($this->session->userdata('usuario_id')){
+            $clienteID=$this->session->userdata('usuario_id');
+            $datosCliente=$this->Model_Login->getUsuario($clienteID);  
+              
+            if($this->Model_productos->comprobarStockCarrito($cesta)==""){
+                $this->Model_productos->creaPedido($datosCliente);//aqui me peta
+                $pedidoID= $this->Model_productos->ultimoPedido($clienteID);//ultimoPedido($usuarioID)
+                $this->Model_productos->registraPedido($cesta, $pedidoID);
+                $this->Model_productos->modificaStockCarrito($cesta);
+                
+                $datos['pedido'] = $this->Model_productos->getPedido($pedidoID);
+                $datos['lineas']=$this->Model_productos->getLineasPedido($pedidoID);
+                $datos['totales'] = $this->Model_productos->totalCompra($cesta);
+                $this->vaciarCarrito();//vaciar carrito
+                $this->load->view('Plantilla', [
+                    'titulo' => 'Pedido realizados',            
+                    'cuerpo' => $this->load->view('DetallePedido', $datos, true),]);
+                }
+            else{
+                $this->load->view('Plantilla', [
+                    'titulo' => 'Pedido realizados',            
+                    'cuerpo' => $this->load->view('ProblemasCompra', [], true),]);
+                }
+            }
+                
+        else{
+            $this->load->view('Plantilla', [
+            'titulo' => 'Pedido realizados',            
+            'cuerpo' => $this->load->view('ProblemasCompra', [], true),]);
+        }
+
+      }
 }

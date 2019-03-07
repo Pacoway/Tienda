@@ -173,4 +173,307 @@ class Model_productos extends CI_Model {
         $this->db->insert('categoria', $datos);
     }
 
+    public function comprobarStock($idArti, $canti){
+        $rs = $this->db //rs=resultado
+                ->select('stock')
+                ->from('producto')
+                ->where('producto_id', $idArti)
+                ->get();
+        $reg = $rs->row(); //reg = registro de resultado
+        if ($reg) { //en el caso de obtener dato a la consulta
+            if($reg->stock>$canti){
+                return true;
+            }else{
+                return false;
+            }
+        } else { //en el caso de no obtener ningun resultado a la consulta
+            return '';
+        }
+        
+    }
+
+    /**
+     * Comprobar el stock de todo el carrito e informar del problema
+     */
+    public function comprobarStockCarrito($carrito){
+        $mensaje="";
+        foreach ($carrito as $producto) {
+            if(!$this->comprobarStock($producto['id'],$producto['qty'])){
+                $mensaje .= "no hay Stock suficiente del producto ".$producto['name']."<br>";
+            }else{
+                $mensaje .= "";//si está vacio es que hay stock suficiente de todo lo que ha seleccionado
+            }
+        }
+        return $mensaje;
+
+    }
+    /**
+     * Nos devuelve todos los pedidos realizados por el usuario_id
+     */
+    public function getPedidos($id) {
+        $query = "select * from pedido where usuario_id=" . $id . "";
+        $query = $this->db->query($query);
+        return $query->result();
+    }
+
+    public function ultimoPedido($usuarioID){
+        //SELECT MAX(pedido_id) AS pedido_id FROM pedido WHERE usuario_id=12
+        $query="SELECT MAX(pedido_id) AS pedido_id FROM pedido WHERE usuario_id=$usuarioID ";
+        $query = $this->db->query($query);
+       // return $query->result();
+        return $query->row()->pedido_id;
+
+    }
+
+    /**
+     * Por cada articulo del carrito creo una linea de pedido
+     * así almaceno toda la información relativa a la compra
+     */
+  /*  public function guardarLineaPedido($datos){
+
+          $this->db->insert('linea_pedido', $datos); 
+    }*/
+
+
+    public function productoImg($prodId){
+        $rs = $this->db
+            ->select('imagen')
+            ->from('producto')
+            ->where('producto_id', $prodId)
+            ->get();
+    
+        $reg= $rs->row();
+        if ($reg) {
+            return $reg->imagen;
+        }
+        else {
+            return '';
+        }
+         
+    }
+
+    public function aplicaDescuento($id){ //no funciona
+        $rs = $this->db //rs=resultado
+                
+                ->from('producto')
+                ->where('producto_id', $id)
+                ->get();       
+        $reg= $rs->row(); //reg = registro de resultado
+        if ($reg) { //en el caso de obtener dato a la consulta
+            $porcentajeDescuento=$reg->descuento/100;
+            $precioFin= $reg->precio - ($reg->precio*$porcentajeDescuento);
+            return $precioFin;
+        }
+        else { //en el caso de no obtener ningun resultado a la consulta
+            return '';
+        }
+    }
+
+
+    public function subTotal($precioConDescuento, $cantidad){
+        return $precioConDescuento * $cantidad;
+    }
+
+
+/**
+ * Por cada una de las lineas de pedido de un usuario en la misma fecha
+ * vamos insertado campos en el pedido
+ */
+    public function registraPedido($productosCarrito, $pedido_id){
+
+       // print_r($pedido_id);
+        foreach ($productosCarrito as $producto) {
+            $imagen=$this->productoImg($producto['id']);
+            $nombre=$this->productoNombre($producto['id']);
+            $precioConDescuento= $this->aplicaDescuento($producto['id']);           
+            $subT= $this->subTotal($precioConDescuento, $producto['qty']);
+        
+            $linea= array(
+                'producto_id'=>$producto['id'],
+                'cantidad'=>$producto['qty'],
+                'importe'=>$subT,
+                'nombre_producto'=>$nombre,
+                'imagen_producto'=>$imagen,
+                'pedido_id'=>$pedido_id
+            );
+          $this->db->insert('linea_pedido', $linea); 
+         // $this->guardarLineaPedido($linea);
+        }
+    }
+
+    /**
+     * Nos devuelve todas las lineas de pedido pertenecientes a una misma compra
+     */
+    public function getLineasPedido($idPedido){
+        $query = "select * from linea_pedido where pedido_id=" . $idPedido . "";
+        $query = $this->db->query($query);
+        return $query->result();
+    }
+
+    public function getStock($id){
+        $rs = $this->db
+        ->select('stock')
+        ->from('producto')
+        ->where('producto_id', $id)
+        ->get();
+
+        $reg= $rs->row();
+        if ($reg) {
+            return $reg->stock;
+        }
+        else {
+            return '';
+        }
+    }
+
+    
+     /**
+      * Modifica el estock del producto en función de la cantidad vendida del articulo
+      */
+    public function ventaProducto($idProducto, $cantidad, $stockPrevioVenta){
+        $nuevoStock= $stockPrevioVenta- $cantidad ;
+        $data = array(
+            'producto_id' => $idProducto,
+            'stock' => $nuevoStock);
+    
+        $this->db->where('producto_id', $idProducto);
+        $this->db->update('producto', $data);
+    }
+
+    public function modificaStockCarrito($cesta){
+        foreach ($cesta as $producto) {
+            $stockPrevio=$this->getStock($producto['id']);
+            $this->ventaProducto($producto['id'],$producto['qty'],$stockPrevio);            # code...
+        }
+
+    }
+ 
+
+    /**
+     * Tras la anulación del un pedido pendiente 
+     * de procesar, los articulos no se han logrado 
+     * vender, por lo tanto hay que restaurar el stock
+     * a la situación inicial
+     */
+    public function devolucionProducto($productoID, $cantidadDevuelta, $stockPostVenta){
+        $nuevoStock= $cantidadDevuelta + $stockPostVenta;
+        $data = array(
+            'producto_id' => $productoID,
+            'stock' => $nuevoStock);
+    
+        $this->db->where('producto_id', $productoID);
+        $this->db->update('producto', $data);
+    }
+
+    /**
+     * Cambia el estado del pedido
+     */
+    public function cambiaEstadoPedido($idPedido, $nuevoEstado){
+        $data = array(
+            'estado' => $nuevoEstado);    
+        $this->db->where('pedido_id', $idPedido);
+        $this->db->update('producto', $data);
+
+    }
+    /**
+     * Estado Inicial: PENDIENTE de procesar  (este estado se puede ANULAR)
+     * Cuando se ha enviado: PROCESADO
+     * Se ha realizado la entrega del pedido: RECIBIDO
+     */
+    public function aclaraEstado($estado){
+        switch (strtoupper($estado))
+        {
+            case 'C':
+                return 'Cancelado';
+                break;
+            case 'P':
+                return 'Pendiente';
+                break;
+            case 'E':
+                return 'Enviado';
+                break;
+            case 'R':
+                return 'Recibido';
+                break;
+        }
+    }
+
+    public function getEstadoPedido($idPedido){
+        $rs = $this->db //rs=resultado
+        ->select('estado')
+        ->from('pedido')
+        ->where('$pedido_id', $idPedido)
+        ->get();
+        $reg = $rs->row(); //reg = registro de resultado
+        if ($reg) { //en el caso de obtener dato a la consulta
+            $reg->estado;
+        } else { //en el caso de no obtener ningun resultado a la consulta
+            return '';
+        }
+    }
+    /**
+     * Obtener los datos de un pedido
+     * @param String $id ID de usuario
+     */
+    public function getPedido($id){
+        $rs = $this->db
+        ->from('pedido')
+        ->where('pedido_id', $id)
+        ->get();
+        $reg = $rs->row(); //reg = registro de resultado
+        if ($reg) { //en el caso de obtener dato a la consulta
+            return $reg;
+        } else { //en el caso de no obtener ningun resultado a la consulta
+            return '';
+        }
+      }
+
+      public function ivaProductoSubTotal($id, $subTotal) { //si funciona
+        $rs = $this->db //rs=resultado
+                ->select('iva')
+                ->from('producto')
+                ->where('producto_id', $id)
+                ->get();
+        $reg = $rs->row(); //reg = registro de resultado
+        if ($reg) { //en el caso de obtener dato a la consulta
+            //para saber la base pillo el iva/100 y luego le sumo 1= 1*21 que será el divisor
+            $divisor= 1+($reg->iva/100);                    //redondeo de dos digitos al alza
+            $baseImponible = round(($subTotal / $divisor), 2,PHP_ROUND_HALF_DOWN) ;
+           // $baseImponible = $precioPostDescuento / (1 * $reg->iva) ;//sin el redondeo
+            return ($subTotal - $baseImponible) ;
+        } else { //en el caso de no obtener ningun resultado a la consulta
+            return '';
+        }
+    }
+
+      public function totalCompra($productosCarrito) { //SI  funciona
+        $info=[];
+        $sumaCompra=0;
+        $sumaIVA=0;
+        foreach ($productosCarrito as $producto) {
+            $precioConDescuento= $this->aplicaDescuento($producto['id']);
+            $subT= $this->subTotal($precioConDescuento, $producto['qty']);
+            $subTIVA= $this->ivaProductoSubTotal($producto['id'], $subT);
+            $sumaCompra += $subT;
+            $sumaIVA += $subTIVA;
+
+        }
+        return $info=array('aPagar'=>$sumaCompra, 'desgloseIVA'=>$sumaIVA);
+    }
+
+      public function creaPedido($datosCliente){
+          $datos="";
+         //S print_r($datosCliente->usuario_id);
+          //foreach ($datosCliente as $info) {
+            //echo $info['usuario_id'];
+              $datos=array(                 
+                  'usuario_id' => $datosCliente->usuario_id,
+                  'nombre_usuario_pedido' => $datosCliente->nombre,
+                  'apellidos_pedido' => $datosCliente->apellidos,
+                  'dni_pedido' => $datosCliente->dni
+                );
+         // }
+          $this->db->insert('pedido', $datos);        
+      }
+
 }

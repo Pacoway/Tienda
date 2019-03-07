@@ -31,7 +31,7 @@ class InicioSesion extends CI_Controller {
 		$this->form_validation->set_rules('contrasena', 'Contraseña', 'required');
 
 		if ($this->Model_Login->LogOK($this->input->post('usuario'), $this->input->post('contrasena'))& $this->form_validation->run() == TRUE) {			
-
+			
 			$this->session->set_userdata('usuario_id', $this->Model_Login->getID($this->input->post('usuario')));
 			$this->session->set_userdata('nombre', $this->Model_Login->getNombre($this->input->post('usuario')));
 			$this->session->set_userdata('administrador', $this->Model_Login->getAdmin($this->input->post('usuario')));

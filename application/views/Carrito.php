@@ -2,7 +2,7 @@
   <table class="table table-bordered">
         <tr>
             <td colspan="6"><h4>Aquí están sus productos seleccionados.</h4></td>
-            <td><a href="<?= site_url() . '/productos/vaciarCarrito/' ?>">Vaciar Carrito</a></td>
+            <td><a href="<?= site_url() . '/Productos/vaciarCarrito/' ?>">Vaciar Carrito</a></td>
         </tr>
         <tr>
             <td><b>Imágen</b></td>
@@ -26,3 +26,5 @@
             <td><a href="<?= site_url().'/Productos/eliminarProducto/'.$row['rowid']?>"><b>Quitar</b> &nbsp<i class="fas fa-times"></i></a></td>
         </tr>
         <?php endforeach;?>
+</table>
+        <a class="btn btn-info" href="<?=site_url().'/Productos/tramitarPedido'?>">Al carrito</a>

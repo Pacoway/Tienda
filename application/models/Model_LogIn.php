@@ -19,7 +19,7 @@ class Model_Login extends CI_Model {
 
         $reg= $rs->row();
         if ($reg) {
-            if (password_verify($contraseña,$reg->contraseña )) {
+            if (password_verify($contrasena,$reg->contraseña )) {
                 return true;
             }
         }
