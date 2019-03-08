@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class PerfilUsuario extends CI_Controller {
 
+	/**
+	 * Muestra el perfil del usuario
+	 */
 	public function index(){
         $this->load->model('Model_productos');
 		$this->load->model('Model_Provincias');
@@ -17,6 +20,9 @@ class PerfilUsuario extends CI_Controller {
 	);
     }
 
+		/**
+		 * Modificacion de datos personales
+		 */
     public function ModificarDatos(){
 		$this->form_validation->set_rules('nombre', 'nombre', 'required');
 		$this->form_validation->set_rules('apellidos', 'apellidos', 'required');
@@ -39,6 +45,9 @@ class PerfilUsuario extends CI_Controller {
 
 	}
 	
+	/**
+	 * Modificar contraseña
+	 */
 	public function cambiarContrasena(){
 		$this->load->model('Model_Login');
 		$this->load->model('Model_productos');
@@ -58,13 +67,15 @@ class PerfilUsuario extends CI_Controller {
 					'cuerpo' => $this->load->view('PerfilUsuario',$datos,true)
 				]);
 			} else {
-				# code...
+				$this->index();
 			}
 			
 		}
 	}
 
-
+	/** 
+	 * Confirmacion de borrado de usuario
+	 */
 	public function darDeBaja(){
 		$this->load->view('Plantilla', [
 			'titulo' => 'Dar De Baja',
@@ -72,6 +83,9 @@ class PerfilUsuario extends CI_Controller {
 		]);			
 	}
 
+	/**
+	 * Eliminacion de usuario
+	 */
 	public function eliminarUsuario(){
 		$this->load->model('Model_Login');
 		$this->Model_Login->darDeBaja($this->session->usuario_id);

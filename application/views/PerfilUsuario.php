@@ -2,6 +2,8 @@
 
 <?= (isset($msg))? '<h4>'.$msg.'</h4>' : '' ?>
 
+    <h4>Pedidos</h4>
+        <a href="<?=site_url().'/Productos/verPedidos/'?>"><button>Ver Pedidos</button></a><br><br>
     <h4>Modificar datos personales</h4>
         <?php echo validation_errors(); ?>
         <?php echo form_open('PerfilUsuario/ModificarDatos'); ?>

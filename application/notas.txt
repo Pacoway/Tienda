@@ -1,30 +1,27 @@
 
-4. Proceso de venta (creación de pedido) (1,5)
-⦁	Mostrar resumen de la lista de productos que forman parte del pedido (0,5 ptos)
+4. Proceso de venta (creación de pedido) (1)
 ⦁	Envío por correo del detalle con una presentación apropiada (0,5 ptos)
 ⦁	Envío por correo del fichero PDF con los detalles. (0,5 ptos)
-5. Pedidos (1,5 ptos)
-⦁	Mostrar pedidos realizados (0,5 ptos)
+5. Pedidos (1 ptos)
 ⦁	Anular pedido, sólo si aun no se ha enviado (0,5 ptos)
 ⦁	Generar albarán/factura de un pedido seleccionado en PDF (0,5 ptos)
 
 6. Valoración global de la aplicación completa (2 ptos).
 
 ⦁	El usuario administrador podrá realizar las siguientes operaciones:
-⦁	Crear / Modificar / Eliminar categorías
-⦁	Crear / Modificar / Eliminar productos
-⦁	Actualizar stocks de productos.
+
 ⦁	Cuando realicemos una actualización de stock se registrará con el objeto de saber cuantos productos se han comprado.
 ⦁	Mostrar ventas pendientes de procesar
-⦁	Marcar ventas como enviadas.
-⦁	Marcar ventas como recibidas.
 ⦁	Mostrar informe de ventas realizadas en un intervalo de fechas.
 ⦁	Generar documento de factura para una venta.
-⦁	Mostrar resumen de importe de ventas mensual.
-⦁	Los informes que tengan más de 10 (este valor será mayor en una aplicación real) elementos serán paginados.
 
 ⦁	Documentacion
 
 perfilusuario else modificar
 
-controlador productos linea 140 (comentada)
+
+SELECT pedido.* , linea_pedido.importe 
+FROM pedido 
+INNER JOIN linea_pedido
+ON linea_pedido.pedido_id = pedido.pedido_id 
+WHERE pedido.usuario_id =3 AND pedido.pedido_id = 50

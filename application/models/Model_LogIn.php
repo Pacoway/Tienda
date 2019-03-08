@@ -8,6 +8,9 @@ class Model_Login extends CI_Model {
         $this->load->database();
     }
 
+    /**
+     * Comprueba las coincidencias del login
+     */
     public function LogOk($usuario, $contrasena)
     {
         $rs = $this->db
@@ -19,15 +22,18 @@ class Model_Login extends CI_Model {
 
         $reg= $rs->row();
         if ($reg) {
-            if (password_verify($contrasena,$reg->contraseña )) {
+             
                 return true;
-            }
+            
         }
         else {
             return false;
         }
     }
 
+    /**
+     * Comprueba coincidencias de contraseña
+     */
     public function compruebaContrasena($contrasena){
 
          $rs = $this->db
@@ -45,6 +51,9 @@ class Model_Login extends CI_Model {
         }
     }
     
+    /**
+     * Insert de usuario
+     */
     public function registroUsuario($nombre_usuario, $contraseña, $email, $nombre, $apellidos, $dni, $direccion, $provincia){
         $id_provincia = $this->db
         ->select('provincia_id')
@@ -55,7 +64,7 @@ class Model_Login extends CI_Model {
         $datosUsuario = array(
             'usuario_id' => null,
             'nombre_usuario' => $nombre_usuario,
-            'contraseña' => password_hash($contraseña, PASSWORD_DEFAULT),
+            'contraseña' => $contraseña,
             'email' => $email,
             'nombre' => $nombre,
             'apellidos' => $apellidos,
@@ -68,6 +77,9 @@ class Model_Login extends CI_Model {
        
     }
 
+    /**
+     * getters
+     */
     public function getId($usuario){
         $rs = $this->db
             ->select('usuario_id')
@@ -130,6 +142,9 @@ class Model_Login extends CI_Model {
         return $rs->row();
     }
 
+    /**
+     * Modificacion de datos personales
+     */
     public function modificarDatosUsuario($nombre, $apellidos, $direccion, $usuario_id){
         $data = array(
             'nombre' => $nombre,
@@ -141,6 +156,9 @@ class Model_Login extends CI_Model {
     $this->db->update('usuario', $data);
     }
 
+    /**
+     * Modificacion de contraseña
+     */
     public function modificarContrasena($contrasena,$usuario_id){
         $data = array(
             'contraseña' => $contrasena,
@@ -150,6 +168,9 @@ class Model_Login extends CI_Model {
     $this->db->update('usuario', $data);
     }
 
+    /**
+     * Eliminar usuario
+     */
     public function darDeBaja($usuario_id){
         $this->db->delete('usuario', array('usuario_id' => $usuario_id));
     }

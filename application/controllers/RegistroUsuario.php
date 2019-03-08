@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class RegistroUsuario extends CI_Controller {
 
+    /**
+     * Registro de usuario con validaciones
+     */
 	public function index(){
         $this->load->model('Model_Provincias');
         $this->load->model('Model_Login');

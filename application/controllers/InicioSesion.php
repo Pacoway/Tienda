@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class InicioSesion extends CI_Controller {
 
+	/**
+	 * Carga el formulario para iniciar la sesion
+	 */
 	public function index(){
         $this->load->model('Model_productos');
         $datos_categorias['categorias']= $this->Model_productos->getCategorias();
@@ -14,6 +17,10 @@ class InicioSesion extends CI_Controller {
 	);
 	}
 
+
+	/**
+	 * Comprueba si el formulario es correcto
+	 */
 	public function LogIn($desde=0){
 		$this->load->model('Model_productos');
 		$this->load->model('Model_Login');
@@ -54,6 +61,10 @@ class InicioSesion extends CI_Controller {
 		}
 	}
 
+
+	/**
+	 * Cerrar sesion de la pagina
+	 */
 	public function LogOut($desde=0){
 		$this->load->model('Model_productos');
 		$this->load->library('pagination');       

@@ -2,7 +2,7 @@
   <table class="table table-bordered">
         <tr>
             <td colspan="6"><h4>Aquí están sus productos seleccionados.</h4></td>
-            <td><a href="<?= site_url() . '/Productos/vaciarCarrito/' ?>">Vaciar Carrito</a></td>
+            <td><a href="<?= site_url() . '/Productos/vaciarCarrito2/' ?>">Vaciar Carrito</a></td>
         </tr>
         <tr>
             <td><b>Imágen</b></td>
@@ -27,4 +27,4 @@
         </tr>
         <?php endforeach;?>
 </table>
-        <a class="btn btn-info" href="<?=site_url().'/Productos/tramitarPedido'?>">Al carrito</a>
+        <a class="btn btn-info" href="<?=site_url().'/Productos/tramitarPedido'?>">Finalizar Compra</a>

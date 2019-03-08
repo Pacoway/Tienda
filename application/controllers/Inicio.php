@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/**
+ * Muestra La pagina principal de la tienda
+ */
 class Inicio extends CI_Controller {
 
 	public function index($desde=0)

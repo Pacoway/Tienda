@@ -8,38 +8,27 @@ class Model_productos extends CI_Model {
         $this->load->database();
     }
 
+    /**
+     * Devuelve los productos
+     */
     public function getProductos() {
 
         $productos = $this->db->get('producto');
         return $productos;
     }
+
     /**
-     * Devuelve los productos detacados siempre y cuando las fechas coincidan
-     * @return type
+     * Devuelve los productos detacados con paginacion
      */
-   
-   /*  public function productosDestacados() //importate PAGINAR
-    {//$desde, $por_pagina pendientes de pasar por parametros a la función para cuando pagine
-     // $query  = ("select * from producto where destacado=1 and visible=1 and finicio_dest<=CURDATE() and ffin_dest>=CURDATE() LIMIT $desde,$por_pagina");
-        $rs = $this->db
-        ->from('producto')
-        ->where('destacado', 1)
-        ->where('visible', 1)
-        ->get();
-        return $rs->result();//No usar result array, si en la vista quiero usar un foreach normalito
-        //return $prodes->result_array();
-    }*/
-
     public function productosDestacados($desde, $por_pagina) { 
-        // $query  = ("select * from producto where destacado=1 and visible=1 and finicio_dest<=CURDATE() and ffin_dest>=CURDATE() LIMIT $desde,$por_pagina");
         $query = ("select * from producto where destacado=1 and visible=1 LIMIT $desde,$por_pagina");
-
         $prodes = $this->db->query($query);
         return $prodes->result(); 
-        //return $prodes->result_array();
     }
 
-  
+  /**
+   * Devuelve la cantidad de destacados
+   */
     public function numeroDestacados(){
             $query = "select * from producto where destacado=1 and visible=1";
             $npro  = $this->db->query($query);
@@ -60,11 +49,9 @@ class Model_productos extends CI_Model {
         return $numProductos->num_rows();
     }
 
-//
+
     /**
-     * Devuelve toda la información de un producto dado su ID
-     * @param type $prodId
-     * @return type
+     * Devuelve el producto por id
      */
     public function getProducto($prodId) {
         $rs = $this->db
@@ -161,7 +148,7 @@ class Model_productos extends CI_Model {
         return $consulta;
     }    
 
-//crea una nueva categoria
+
     public function insertCategoria($id, $nombre, $descripcion, $anuncio, $visible) {
         $datos = array(
             'categoria_id' => $id,
@@ -174,19 +161,19 @@ class Model_productos extends CI_Model {
     }
 
     public function comprobarStock($idArti, $canti){
-        $rs = $this->db //rs=resultado
+        $rs = $this->db 
                 ->select('stock')
                 ->from('producto')
                 ->where('producto_id', $idArti)
                 ->get();
-        $reg = $rs->row(); //reg = registro de resultado
-        if ($reg) { //en el caso de obtener dato a la consulta
+        $reg = $rs->row();
+        if ($reg) { 
             if($reg->stock>$canti){
                 return true;
             }else{
                 return false;
             }
-        } else { //en el caso de no obtener ningun resultado a la consulta
+        } else { 
             return '';
         }
         
@@ -201,7 +188,7 @@ class Model_productos extends CI_Model {
             if(!$this->comprobarStock($producto['id'],$producto['qty'])){
                 $mensaje .= "no hay Stock suficiente del producto ".$producto['name']."<br>";
             }else{
-                $mensaje .= "";//si está vacio es que hay stock suficiente de todo lo que ha seleccionado
+                $mensaje .= "";
             }
         }
         return $mensaje;
@@ -216,25 +203,33 @@ class Model_productos extends CI_Model {
         return $query->result();
     }
 
+    public function getPedidosJoin($id) {
+        $query = "SELECT pedido.* , linea_pedido.importe FROM pedido INNER JOIN linea_pedido ON linea_pedido.pedido_id = pedido.pedido_id WHERE pedido.usuario_id =".$id;
+        $query = $this->db->query($query);
+        return $query->result();
+    }
+
+    public function getListaPedidos($id) {
+        $rs = $this->db //rs=resultado
+        ->from('linea_pedido')
+        ->where('pedido_id', $id)
+        ->get();
+        return $rs->result();
+    }
+
+    /**
+     * devuelve el id del ultimo pedido 
+     */
     public function ultimoPedido($usuarioID){
-        //SELECT MAX(pedido_id) AS pedido_id FROM pedido WHERE usuario_id=12
         $query="SELECT MAX(pedido_id) AS pedido_id FROM pedido WHERE usuario_id=$usuarioID ";
         $query = $this->db->query($query);
-       // return $query->result();
         return $query->row()->pedido_id;
 
     }
 
     /**
-     * Por cada articulo del carrito creo una linea de pedido
-     * así almaceno toda la información relativa a la compra
+     * devuelve la imagen
      */
-  /*  public function guardarLineaPedido($datos){
-
-          $this->db->insert('linea_pedido', $datos); 
-    }*/
-
-
     public function productoImg($prodId){
         $rs = $this->db
             ->select('imagen')
@@ -252,19 +247,19 @@ class Model_productos extends CI_Model {
          
     }
 
-    public function aplicaDescuento($id){ //no funciona
-        $rs = $this->db //rs=resultado
+    public function aplicaDescuento($id){
+        $rs = $this->db 
                 
                 ->from('producto')
                 ->where('producto_id', $id)
                 ->get();       
-        $reg= $rs->row(); //reg = registro de resultado
-        if ($reg) { //en el caso de obtener dato a la consulta
+        $reg= $rs->row(); 
+        if ($reg) { 
             $porcentajeDescuento=$reg->descuento/100;
             $precioFin= $reg->precio - ($reg->precio*$porcentajeDescuento);
             return $precioFin;
         }
-        else { //en el caso de no obtener ningun resultado a la consulta
+        else {
             return '';
         }
     }
@@ -276,12 +271,10 @@ class Model_productos extends CI_Model {
 
 
 /**
- * Por cada una de las lineas de pedido de un usuario en la misma fecha
- * vamos insertado campos en el pedido
+ * Registro de pedido
  */
     public function registraPedido($productosCarrito, $pedido_id){
 
-       // print_r($pedido_id);
         foreach ($productosCarrito as $producto) {
             $imagen=$this->productoImg($producto['id']);
             $nombre=$this->productoNombre($producto['id']);
@@ -297,7 +290,6 @@ class Model_productos extends CI_Model {
                 'pedido_id'=>$pedido_id
             );
           $this->db->insert('linea_pedido', $linea); 
-         // $this->guardarLineaPedido($linea);
         }
     }
 
@@ -343,17 +335,14 @@ class Model_productos extends CI_Model {
     public function modificaStockCarrito($cesta){
         foreach ($cesta as $producto) {
             $stockPrevio=$this->getStock($producto['id']);
-            $this->ventaProducto($producto['id'],$producto['qty'],$stockPrevio);            # code...
+            $this->ventaProducto($producto['id'],$producto['qty'],$stockPrevio);   
         }
 
     }
  
 
     /**
-     * Tras la anulación del un pedido pendiente 
-     * de procesar, los articulos no se han logrado 
-     * vender, por lo tanto hay que restaurar el stock
-     * a la situación inicial
+     * devuelve el stock del producto al anularlo
      */
     public function devolucionProducto($productoID, $cantidadDevuelta, $stockPostVenta){
         $nuevoStock= $cantidadDevuelta + $stockPostVenta;
@@ -376,9 +365,7 @@ class Model_productos extends CI_Model {
 
     }
     /**
-     * Estado Inicial: PENDIENTE de procesar  (este estado se puede ANULAR)
-     * Cuando se ha enviado: PROCESADO
-     * Se ha realizado la entrega del pedido: RECIBIDO
+     * Cambia las siglas de estado por palabra
      */
     public function aclaraEstado($estado){
         switch (strtoupper($estado))
@@ -399,54 +386,52 @@ class Model_productos extends CI_Model {
     }
 
     public function getEstadoPedido($idPedido){
-        $rs = $this->db //rs=resultado
+        $rs = $this->db 
         ->select('estado')
         ->from('pedido')
         ->where('$pedido_id', $idPedido)
         ->get();
-        $reg = $rs->row(); //reg = registro de resultado
-        if ($reg) { //en el caso de obtener dato a la consulta
+        $reg = $rs->row();
+        if ($reg) {
             $reg->estado;
-        } else { //en el caso de no obtener ningun resultado a la consulta
+        } else { 
             return '';
         }
     }
     /**
      * Obtener los datos de un pedido
-     * @param String $id ID de usuario
      */
     public function getPedido($id){
         $rs = $this->db
         ->from('pedido')
         ->where('pedido_id', $id)
         ->get();
-        $reg = $rs->row(); //reg = registro de resultado
-        if ($reg) { //en el caso de obtener dato a la consulta
+        $reg = $rs->row(); 
+        if ($reg) { 
             return $reg;
-        } else { //en el caso de no obtener ningun resultado a la consulta
+        } else { 
             return '';
         }
       }
 
-      public function ivaProductoSubTotal($id, $subTotal) { //si funciona
-        $rs = $this->db //rs=resultado
+      public function ivaProductoSubTotal($id, $subTotal) {
+        $rs = $this->db
                 ->select('iva')
                 ->from('producto')
                 ->where('producto_id', $id)
                 ->get();
-        $reg = $rs->row(); //reg = registro de resultado
-        if ($reg) { //en el caso de obtener dato a la consulta
-            //para saber la base pillo el iva/100 y luego le sumo 1= 1*21 que será el divisor
-            $divisor= 1+($reg->iva/100);                    //redondeo de dos digitos al alza
+        $reg = $rs->row(); 
+        if ($reg) { 
+
+            $divisor= 1+($reg->iva/100);
             $baseImponible = round(($subTotal / $divisor), 2,PHP_ROUND_HALF_DOWN) ;
-           // $baseImponible = $precioPostDescuento / (1 * $reg->iva) ;//sin el redondeo
             return ($subTotal - $baseImponible) ;
-        } else { //en el caso de no obtener ningun resultado a la consulta
+        } else { 
             return '';
         }
     }
 
-      public function totalCompra($productosCarrito) { //SI  funciona
+      public function totalCompra($productosCarrito) {
         $info=[];
         $sumaCompra=0;
         $sumaIVA=0;
@@ -463,17 +448,15 @@ class Model_productos extends CI_Model {
 
       public function creaPedido($datosCliente){
           $datos="";
-         //S print_r($datosCliente->usuario_id);
-          //foreach ($datosCliente as $info) {
-            //echo $info['usuario_id'];
               $datos=array(                 
                   'usuario_id' => $datosCliente->usuario_id,
                   'nombre_usuario_pedido' => $datosCliente->nombre,
                   'apellidos_pedido' => $datosCliente->apellidos,
                   'dni_pedido' => $datosCliente->dni
                 );
-         // }
           $this->db->insert('pedido', $datos);        
       }
+
+
 
 }
