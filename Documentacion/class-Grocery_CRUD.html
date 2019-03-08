@@ -1,0 +1,5466 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Grocery_CRUD | Tienda</title>
+
+	<script type="text/javascript" src="resources/combined.js?478284995"></script>
+	<script type="text/javascript" src="elementlist.js?2906824120"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-CodeIgniter.html">CodeIgniter<span></span></a>
+						<ul>
+				<li><a href="package-CodeIgniter.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="package-CodeIgniter.Libraries.html">Libraries</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="package-grocery.html">grocery</a>
+						</li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Grocery_CRUD.html">Grocery_CRUD</a></li>
+				<li><a href="class-grocery_CRUD_Field_Types.html">grocery_CRUD_Field_Types</a></li>
+				<li><a href="class-grocery_CRUD_Layout.html">grocery_CRUD_Layout</a></li>
+				<li><a href="class-Grocery_crud_model.html">Grocery_crud_model</a></li>
+				<li><a href="class-grocery_CRUD_Model_Driver.html">grocery_CRUD_Model_Driver</a></li>
+				<li><a href="class-grocery_CRUD_States.html">grocery_CRUD_States</a></li>
+				<li><a href="class-UploadHandler.html">UploadHandler</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-grocery.html" title="Summary of grocery"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Grocery_CRUD</h1>
+
+
+	<div class="description">
+	
+<p>PHP grocery CRUD</p>
+
+<p>Creates a full functional CRUD with few lines of code.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-grocery_CRUD_Field_Types.html"><span>grocery_CRUD_Field_Types</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-grocery_CRUD_Model_Driver.html"><span>grocery_CRUD_Model_Driver</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-grocery_CRUD_Layout.html"><span>grocery_CRUD_Layout</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:90px">
+			<img src="resources/inherit.png" alt="Extended by" />
+			<a href="class-grocery_CRUD_States.html"><span>grocery_CRUD_States</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:120px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>Grocery_CRUD</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-grocery.html">grocery</a><br />
+
+				<b>Copyright:</b>
+				Copyright (c) 2010 through 2014, John Skoumbourdis<br />
+				<b>License:</b>
+				<a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-grocery-crud.txt">https://github.com/scoumbourdis/grocery-crud/blob/master/license-grocery-crud.txt</a><br />
+				<b>Author:</b>
+				John Skoumbourdis &lt;<a
+href="mailto:scoumbourdisj&#64;gmail.com">scoumbourdisj&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Link:</b>
+				<a href="http://www.grocerycrud.com/documentation">http://www.grocerycrud.com/documentation</a><br />
+		<b>Located at</b> <a href="source-class-Grocery_CRUD.html#3544-5420" title="Go to source code">application/libraries/Grocery_CRUD.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3667-3676" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="columns" id="_columns">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_columns">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3678-3698" title="Go to source code">columns</a>( )</code>
+
+		<div class="description short">
+			
+<p>The displayed columns that user see</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The displayed columns that user see</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_rules" id="_set_rules">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_rules">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3701-3725" title="Go to source code">set_rules</a>( <span>mixed <var>$field</var></span>, <span>string <var>$label</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$rules</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$errors</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Set Validation Rules</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Validation Rules</p>
+
+<p>Important note: If the $field is an array then no automated crud fields will
+take apart</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd><code>mixed</code></dd>
+					<dt><var>$label</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$rules</var></dt>
+					<dd></dd>
+					<dt><var>$errors</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+				<h4>Oaram</h4>
+				<div class="list">
+						array<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="change_field_type" id="_change_field_type">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_change_field_type">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3727-3743" title="Go to source code">change_field_type</a>( <span>string <var>$field</var></span>, <span>string <var>$type</var></span>, <span>array|string <var>$extras</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Changes the default field type</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd><code>string</code><br>$field</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type</dd>
+					<dt><var>$extras</var></dt>
+					<dd><code>array|string</code><br>$extras</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="field_type" id="_field_type">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_field_type">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3745-3755" title="Go to source code">field_type</a>( <span>string <var>$field</var></span>, <span>string <var>$type</var></span>, <span>array|string <var>$extras</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Just an alias to the change_field_type method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd><code>string</code><br>$field</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type</dd>
+					<dt><var>$extras</var></dt>
+					<dd><code>array|string</code><br>$extras</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_primary_key" id="_set_primary_key">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_primary_key">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3757-3769" title="Go to source code">set_primary_key</a>( <span>string <var>$primary_key_field</var></span>, <span>string <var>$table_name</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Change the default primary key for a specific table. If the $table_name is
+NULL then the primary key is for the default table name that we added at the
+set_table method</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Change the default primary key for a specific table. If the $table_name is
+NULL then the primary key is for the default table name that we added at the
+set_table method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$primary_key_field</var></dt>
+					<dd><code>string</code><br>$primary_key_field</dd>
+					<dt><var>$table_name</var></dt>
+					<dd><code>string</code><br>$table_name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_texteditor" id="_unset_texteditor">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_texteditor">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3771-3793" title="Go to source code">unset_texteditor</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets the texteditor of the selected fields</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets the texteditor of the selected fields</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_jquery" id="_unset_jquery">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_jquery">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3795-3806" title="Go to source code">unset_jquery</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets just the jquery library from the js. This function can be used if
+there is already a jquery included in the main template. This will avoid all
+jquery conflicts.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets just the jquery library from the js. This function can be used if
+there is already a jquery included in the main template. This will avoid all
+jquery conflicts.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_jquery_ui" id="_unset_jquery_ui">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_jquery_ui">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3808-3820" title="Go to source code">unset_jquery_ui</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets the jquery UI Javascript and CSS. This function is really useful when
+the jquery UI JavaScript and CSS are already included in the main template. This
+will avoid all jquery UI conflicts.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets the jquery UI Javascript and CSS. This function is really useful when
+the jquery UI JavaScript and CSS are already included in the main template. This
+will avoid all jquery UI conflicts.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_bootstrap" id="_unset_bootstrap">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_bootstrap">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3822-3833" title="Go to source code">unset_bootstrap</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets just the twitter bootstrap libraries from the js and css. This
+function can be used if there is already twitter bootstrap files included in the
+main template. If you are already using a bootstrap template then it's not
+necessary to load the files again.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets just the twitter bootstrap libraries from the js and css. This
+function can be used if there is already twitter bootstrap files included in the
+main template. If you are already using a bootstrap template then it's not
+necessary to load the files again.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_add" id="_unset_add">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_add">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3835-3846" title="Go to source code">unset_add</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets the add operation from the list</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets the add operation from the list</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_edit" id="_unset_edit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_edit">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3848-3858" title="Go to source code">unset_edit</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets the edit operation from the list</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets the edit operation from the list</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_delete" id="_unset_delete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_delete">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3860-3870" title="Go to source code">unset_delete</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets the delete operation from the list</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets the delete operation from the list</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_read" id="_unset_read">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_read">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3872-3882" title="Go to source code">unset_read</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets the read operation from the list</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets the read operation from the list</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_view" id="_unset_view">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_view">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3884-3892" title="Go to source code">unset_view</a>( )</code>
+
+		<div class="description short">
+			
+<p>Just an alias to unset_read</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Just an alias to unset_read</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_export" id="_unset_export">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_export">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3894-3904" title="Go to source code">unset_export</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets the export button and functionality from the list</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets the export button and functionality from the list</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_print" id="_unset_print">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_print">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3907-3917" title="Go to source code">unset_print</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets the print button and functionality from the list</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets the print button and functionality from the list</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_operations" id="_unset_operations">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_operations">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3919-3935" title="Go to source code">unset_operations</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets all the operations from the list</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets all the operations from the list</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_columns" id="_unset_columns">
+
+		<td class="attributes"><code>
+			 public 
+			void.
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_columns">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3937-3954" title="Go to source code">unset_columns</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets a column from the list</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets a column from the list</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>void.</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_list" id="_unset_list">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_list">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3956-3961" title="Go to source code">unset_list</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_fields" id="_unset_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3963-3978" title="Go to source code">unset_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_add_fields" id="_unset_add_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_add_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3980-3992" title="Go to source code">unset_add_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_edit_fields" id="_unset_edit_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_edit_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#3994-4006" title="Go to source code">unset_edit_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_clone_fields" id="_unset_clone_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_clone_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4008-4019" title="Go to source code">unset_clone_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_read_fields" id="_unset_read_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_read_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4021-4033" title="Go to source code">unset_read_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_back_to_list" id="_unset_back_to_list">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_back_to_list">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4036-4046" title="Go to source code">unset_back_to_list</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets everything that has to do with buttons or links with go back to list
+message</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets everything that has to do with buttons or links with go back to list
+message</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_clone" id="_unset_clone">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unset_clone">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4048-4058" title="Go to source code">unset_clone</a>( )</code>
+
+		<div class="description short">
+			
+<p>Unsets everything that has to do with buttons or links with clone</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unsets everything that has to do with buttons or links with clone</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_clone" id="_set_clone">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_clone">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4060-4066" title="Go to source code">set_clone</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fields" id="_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4068-4090" title="Go to source code">fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The fields that user will see on add/edit</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_fields" id="_add_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4092-4108" title="Go to source code">add_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The fields that user can see . It is only for the add form</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="edit_fields" id="_edit_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_edit_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4110-4126" title="Go to source code">edit_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The fields that user can see . It is only for the edit form</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_read_fields" id="_set_read_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_read_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4128-4139" title="Go to source code">set_read_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="display_as" id="_display_as">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_display_as">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4141-4162" title="Go to source code">display_as</a>( <span>mixed <var>$field_name</var></span>, <span>mixed <var>$display_as</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Changes the displaying label of the field</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field_name</var></dt>
+					<dd><code>mixed</code><br>$field_name</dd>
+					<dt><var>$display_as</var></dt>
+					<dd><code>mixed</code><br>$display_as</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_load_language" id="__load_language">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__load_language">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4164-4183" title="Go to source code">_load_language</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Load the language strings array from the language file</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_load_date_format" id="__load_date_format">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__load_date_format">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4185-4212" title="Go to source code">_load_date_format</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_lang_string" id="_set_lang_string">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_lang_string">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4214-4224" title="Go to source code">set_lang_string</a>( <span>string <var>$handle</var></span>, <span>string <var>$lang_string</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set a language string directly</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$handle</var></dt>
+					<dd><code>string</code><br>$handle</dd>
+					<dt><var>$lang_string</var></dt>
+					<dd><code>string</code><br>$string</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="l" id="_l">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_l">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4226-4234" title="Go to source code">l</a>( <span>string <var>$handle</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Just an alias to get_lang_string method</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$handle</var></dt>
+					<dd><code>string</code><br>$handle</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_lang_string" id="_get_lang_string">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_lang_string">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4236-4244" title="Go to source code">get_lang_string</a>( <span>string <var>$handle</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the language string of the inserted string handle</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$handle</var></dt>
+					<dd><code>string</code><br>$handle</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_language" id="_set_language">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_language">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4246-4257" title="Go to source code">set_language</a>( <span>string <var>$language</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Simply set the language</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$language</var></dt>
+					<dd><code>string</code><br>$language</dd>
+				</dl></div>
+
+
+
+				<h4>Example</h4>
+				<div class="list">
+						english<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_columns" id="_get_columns">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_columns">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4259-4349" title="Go to source code">get_columns</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_add_fields" id="_get_add_fields">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_add_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4351-4394" title="Go to source code">get_add_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_edit_fields" id="_get_edit_fields">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_edit_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4396-4437" title="Go to source code">get_edit_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_read_fields" id="_get_read_fields">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_read_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4439-4480" title="Go to source code">get_read_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="order_by" id="_order_by">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_order_by">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4482-4487" title="Go to source code">order_by</a>( <span>mixed <var>$order_by</var></span>, <span>mixed <var>$direction</var> = <span class="php-quote">'asc'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="where" id="_where">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_where">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4489-4494" title="Go to source code">where</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$escape</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="or_where" id="_or_where">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_or_where">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4496-4501" title="Go to source code">or_where</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">NULL</span></span>, <span>mixed <var>$escape</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="like" id="_like">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_like">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4503-4508" title="Go to source code">like</a>( <span>mixed <var>$field</var></span>, <span>mixed <var>$match</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$side</var> = <span class="php-quote">'both'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="having" id="_having">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_having">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4510-4515" title="Go to source code">having</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$escape</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="or_having" id="_or_having">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_or_having">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4517-4522" title="Go to source code">or_having</a>( <span>mixed <var>$key</var></span>, <span>mixed <var>$value</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$escape</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="or_like" id="_or_like">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_or_like">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4524-4529" title="Go to source code">or_like</a>( <span>mixed <var>$field</var></span>, <span>mixed <var>$match</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$side</var> = <span class="php-quote">'both'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="limit" id="_limit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_limit">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4531-4536" title="Go to source code">limit</a>( <span>mixed <var>$limit</var></span>, <span>mixed <var>$offset</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_initialize_helpers" id="__initialize_helpers">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__initialize_helpers">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4538-4544" title="Go to source code">_initialize_helpers</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_initialize_variables" id="__initialize_variables">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__initialize_variables">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4546-4585" title="Go to source code">_initialize_variables</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_set_primary_keys_to_model" id="__set_primary_keys_to_model">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__set_primary_keys_to_model">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4587-4596" title="Go to source code">_set_primary_keys_to_model</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="pre_render" id="_pre_render">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_pre_render">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4598-4616" title="Go to source code">pre_render</a>( )</code>
+
+		<div class="description short">
+			
+<p>Initialize all the required libraries and variables before rendering</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initialize all the required libraries and variables before rendering</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="render" id="_render">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_render">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4618-4917" title="Go to source code">render</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Or else ... make it work! The web application takes decision of what to do
+and show it to the final user. Without this function nothing works. Here is the
+core of grocery CRUD project.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_common_data" id="_get_common_data">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_common_data">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4919-4927" title="Go to source code">get_common_data</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_insert" id="_callback_before_insert">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_before_insert">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4929-4938" title="Go to source code">callback_before_insert</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_insert" id="_callback_after_insert">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_after_insert">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4940-4949" title="Go to source code">callback_after_insert</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_insert" id="_callback_insert">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_insert">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4951-4960" title="Go to source code">callback_insert</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_update" id="_callback_before_update">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_before_update">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4963-4972" title="Go to source code">callback_before_update</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_update" id="_callback_after_update">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_after_update">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4974-4983" title="Go to source code">callback_after_update</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_update" id="_callback_update">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_update">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4986-4996" title="Go to source code">callback_update</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed</code><br>$callback</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_delete" id="_callback_before_delete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_before_delete">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#4998-5007" title="Go to source code">callback_before_delete</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_delete" id="_callback_after_delete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_after_delete">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5009-5018" title="Go to source code">callback_after_delete</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_delete" id="_callback_delete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_delete">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5020-5029" title="Go to source code">callback_delete</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_clone" id="_callback_before_clone">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_before_clone">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5031-5040" title="Go to source code">callback_before_clone</a>( <span>null <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>null</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_clone" id="_callback_after_clone">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_after_clone">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5042-5051" title="Go to source code">callback_after_clone</a>( <span>null <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>null</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_clone" id="_callback_clone">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_clone">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5053-5062" title="Go to source code">callback_clone</a>( <span>null <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>null</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_column" id="_callback_column">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_column">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5066-5077" title="Go to source code">callback_column</a>( <span>string <var>$column</var></span>, <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$column</var></dt>
+					<dd><code>string</code><br>$column</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed</code><br>$callback</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_field" id="_callback_field">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_field">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5079-5092" title="Go to source code">callback_field</a>( <span>string <var>$field</var></span>, <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd><code>string</code><br>$field</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed</code><br>$callback</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_add_field" id="_callback_add_field">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_add_field">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5094-5105" title="Go to source code">callback_add_field</a>( <span>string <var>$field</var></span>, <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd><code>string</code><br>$field</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed</code><br>$callback</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_edit_field" id="_callback_edit_field">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_edit_field">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5107-5118" title="Go to source code">callback_edit_field</a>( <span>string <var>$field</var></span>, <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd><code>string</code><br>$field</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed</code><br>$callback</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_read_field" id="_callback_read_field">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_read_field">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5120-5130" title="Go to source code">callback_read_field</a>( <span>mixed <var>$field</var></span>, <span>mixed|callable|null <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field</var></dt>
+					<dd><code>mixed</code><br>$field</dd>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed|callable|null</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>$this<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_upload" id="_callback_upload">
+
+		<td class="attributes"><code>
+			 public 
+			grocery_CRUD
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_upload">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5132-5144" title="Go to source code">callback_upload</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Callback that replace the default auto uploader</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>grocery_CRUD</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_upload" id="_callback_before_upload">
+
+		<td class="attributes"><code>
+			 public 
+			grocery_CRUD
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_before_upload">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5146-5157" title="Go to source code">callback_before_upload</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>A callback that triggered before the upload functionality. This callback is
+suggested for validation checks</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>grocery_CRUD</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_upload" id="_callback_after_upload">
+
+		<td class="attributes"><code>
+			 public 
+			grocery_CRUD
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_callback_after_upload">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5159-5171" title="Go to source code">callback_after_upload</a>( <span>mixed <var>$callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>A callback that triggered after the upload functionality</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd><code>mixed</code><br>$callback</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>grocery_CRUD</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_table" id="_get_table">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_table">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5173-5208" title="Go to source code">get_table</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the basic database table of our crud.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="required_fields" id="_required_fields">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_required_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5210-5226" title="Go to source code">required_fields</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The field names of the required fields</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unique_fields" id="_unique_fields">
+
+		<td class="attributes"><code>
+			 public 
+			grocery_CRUD
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unique_fields">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5228-5245" title="Go to source code">unique_fields</a>( )</code>
+
+		<div class="description short">
+			
+<p>Add the fields that they are as UNIQUE in the database structure</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Add the fields that they are as UNIQUE in the database structure</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>grocery_CRUD</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_table" id="_set_table">
+
+		<td class="attributes"><code>
+			 public 
+			grocery_CRUD
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_table">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5247-5270" title="Go to source code">set_table</a>( <span>string <var>$table_name</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the basic database table that we will get our data.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$table_name</var></dt>
+					<dd><code>string</code><br>$table_name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>grocery_CRUD</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_crud_url_path" id="_set_crud_url_path">
+
+		<td class="attributes"><code>
+			 public 
+			grocery_CRUD
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_crud_url_path">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5272-5299" title="Go to source code">set_crud_url_path</a>( <span>string <var>$crud_url_path</var></span>, <span>string <var>$list_url_path</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set a full URL path to this method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set a full URL path to this method.</p>
+
+<p>This method is useful when the path is not specified correctly. Especially
+when we are using routes. For example: Let's say we have the path <a
+href="http://www.example.com/">http://www.example.com/</a> however the original
+url path is <a
+href="http://www.example.com/example/index">http://www.example.com/example/index</a>
+. We have to specify the url so we can have all the CRUD operations correctly.
+The url path has to be set from this method like this:</p>
+
+<pre>
+<span class="php-var">$crud</span>-&gt;set_crud_url_path(site_url(<span
+class="php-quote">'example/index'</span>));
+</pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$crud_url_path</var></dt>
+					<dd><code>string</code><br>$crud_url_path</dd>
+					<dt><var>$list_url_path</var></dt>
+					<dd><code>string</code><br>$list_url_path</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>grocery_CRUD</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_subject" id="_set_subject">
+
+		<td class="attributes"><code>
+			 public 
+			grocery_CRUD
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_subject">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5301-5319" title="Go to source code">set_subject</a>( <span>string <var>$subject</var></span>, <span>string <var>$subject_plural</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<h1>Set a subject to understand what type of CRUD you use.</h1>
+
+<p>Subject_plural: Sets the subject to its plural form. For example the plural
+of "Customer" is "Customers", "Product" is "Products"... e.t.c.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code><br>$subject</dd>
+					<dt><var>$subject_plural</var></dt>
+					<dd><code>string</code><br>$subject_plural</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>grocery_CRUD</code><br />
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						In this CRUD we work with the table db_categories. The $subject will be the
+'Category' and the $subject_plural will be 'Categories'<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_action" id="_add_action">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add_action">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5321-5344" title="Go to source code">add_action</a>( <span>mixed <var>$label</var></span>, <span>mixed <var>$image_url</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$link_url</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$css_class</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$url_callback</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Enter description here ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$label</var></dt>
+					<dd><code>mixed</code><br>$title</dd>
+					<dt><var>$image_url</var></dt>
+					<dd><code>mixed</code><br>$image_url</dd>
+					<dt><var>$link_url</var></dt>
+					<dd><code>mixed</code><br>$url</dd>
+					<dt><var>$css_class</var></dt>
+					<dd><code>mixed</code><br>$css_class</dd>
+					<dt><var>$url_callback</var></dt>
+					<dd><code>mixed</code><br>$url_callback</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_relation" id="_set_relation">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Grocery_CRUD.html">Grocery_CRUD</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_relation">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5346-5360" title="Go to source code">set_relation</a>( <span>string <var>$field_name</var></span>, <span>string <var>$related_table</var></span>, <span>string <var>$related_title_field</var></span>, <span>mixed <var>$where_clause</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$order_by</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set a simple 1-n foreign key relation</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field_name</var></dt>
+					<dd><code>string</code><br>$field_name</dd>
+					<dt><var>$related_table</var></dt>
+					<dd><code>string</code><br>$related_table</dd>
+					<dt><var>$related_title_field</var></dt>
+					<dd><code>string</code><br>$related_title_field</dd>
+					<dt><var>$where_clause</var></dt>
+					<dd><code>mixed</code><br>$where_clause</dd>
+					<dt><var>$order_by</var></dt>
+					<dd><code>string</code><br>$order_by</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Grocery_CRUD.html">Grocery_CRUD</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_relation_n_n" id="_set_relation_n_n">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Grocery_CRUD.html">Grocery_CRUD</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_relation_n_n">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5362-5390" title="Go to source code">set_relation_n_n</a>( <span>string <var>$field_name</var></span>, <span>string <var>$relation_table</var></span>, <span>string <var>$selection_table</var></span>, <span>string <var>$primary_key_alias_to_this_table</var></span>, <span>string <var>$primary_key_alias_to_selection_table</var></span>, <span>string <var>$title_field_selection_table</var></span>, <span>string <var>$priority_field_relation_table</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$where_clause</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets a relation with n-n relationship.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field_name</var></dt>
+					<dd><code>string</code><br>$field_name</dd>
+					<dt><var>$relation_table</var></dt>
+					<dd><code>string</code><br>$relation_table</dd>
+					<dt><var>$selection_table</var></dt>
+					<dd><code>string</code><br>$selection_table</dd>
+					<dt><var>$primary_key_alias_to_this_table</var></dt>
+					<dd><code>string</code><br>$primary_key_alias_to_this_table</dd>
+					<dt><var>$primary_key_alias_to_selection_table</var></dt>
+					<dd><code>string</code><br>$primary_key_alias_to_selection_table</dd>
+					<dt><var>$title_field_selection_table</var></dt>
+					<dd><code>string</code><br>$title_field_selection_table</dd>
+					<dt><var>$priority_field_relation_table</var></dt>
+					<dd><code>string</code><br>$priority_field_relation_table</dd>
+					<dt><var>$where_clause</var></dt>
+					<dd><code>mixed</code><br>$where_clause</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Grocery_CRUD.html">Grocery_CRUD</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set_field_upload" id="_set_field_upload">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-Grocery_CRUD.html">Grocery_CRUD</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_field_upload">#</a>
+		<code><a href="source-class-Grocery_CRUD.html#5392-5419" title="Go to source code">set_field_upload</a>( <span>string <var>$field_name</var></span>, <span>string <var>$upload_dir</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$allowed_file_types</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Transform a field to an upload field</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$field_name</var></dt>
+					<dd><code>string</code><br>$field_name</dd>
+					<dt><var>$upload_dir</var></dt>
+					<dd><code>string</code><br>$upload_path</dd>
+					<dt><var>$allowed_file_types</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-Grocery_CRUD.html">Grocery_CRUD</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-grocery_CRUD_States.html#methods">grocery_CRUD_States</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-grocery_CRUD_States.html#_getAddUrl">getAddUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getAjaxListInfoUrl">getAjaxListInfoUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getAjaxListUrl">getAjaxListUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getAjaxRelationManytoManyUrl">getAjaxRelationManytoManyUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getAjaxRelationUrl">getAjaxRelationUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getCloneUrl">getCloneUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getDeleteMultipleUrl">getDeleteMultipleUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getDeleteUrl">getDeleteUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getEditUrl">getEditUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getExportToExcelUrl">getExportToExcelUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getFileDeleteUrl">getFileDeleteUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getInsertUrl">getInsertUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getListSuccessUrl">getListSuccessUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getListUrl">getListUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getPrintUrl">getPrintUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getReadUrl">getReadUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getState">getState()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getStateCode">getStateCode()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getStateInfo">getStateInfo()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getUpdateUrl">getUpdateUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getUploadUrl">getUploadUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getValidationInsertUrl">getValidationInsertUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_getValidationUpdateUrl">getValidationUpdateUrl()</a>, 
+			<a href="class-grocery_CRUD_States.html#_get_controller_name">get_controller_name()</a>, 
+			<a href="class-grocery_CRUD_States.html#_get_method_hash">get_method_hash()</a>, 
+			<a href="class-grocery_CRUD_States.html#_get_method_name">get_method_name()</a>, 
+			<a href="class-grocery_CRUD_States.html#_get_state_info_from_url">get_state_info_from_url()</a>, 
+			<a href="class-grocery_CRUD_States.html#_state_url">state_url()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-grocery_CRUD_Layout.html#methods">grocery_CRUD_Layout</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-grocery_CRUD_Layout.html#__add_js_vars">_add_js_vars()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__convert_bytes_ui_to_bytes">_convert_bytes_ui_to_bytes()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__export_to_excel">_export_to_excel()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__get_ajax_results">_get_ajax_results()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__inline_js">_inline_js()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__is_ajax">_is_ajax()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__print_webpage">_print_webpage()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__theme_view">_theme_view()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__trim_export_string">_trim_export_string()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#__trim_print_string">_trim_print_string()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_change_list">change_list()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_change_list_add_actions">change_list_add_actions()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_delete_file_layout">delete_file_layout()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_delete_layout">delete_layout()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_exportToExcel">exportToExcel()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_add_hidden_fields">get_add_hidden_fields()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_add_input_fields">get_add_input_fields()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_css_files">get_css_files()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_date_input">get_date_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_datetime_input">get_datetime_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_dropdown_input">get_dropdown_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_edit_hidden_fields">get_edit_hidden_fields()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_edit_input_fields">get_edit_input_fields()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_enum_input">get_enum_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_hidden_input">get_hidden_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_integer_input">get_integer_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_js_config_files">get_js_config_files()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_js_files">get_js_files()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_js_lib_files">get_js_lib_files()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_layout">get_layout()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_multiselect_input">get_multiselect_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_password_input">get_password_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_read_input_fields">get_read_input_fields()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_readonly_input">get_readonly_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_relation_input">get_relation_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_relation_n_n_input">get_relation_n_n_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_relation_readonly_input">get_relation_readonly_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_set_input">get_set_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_string_input">get_string_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_success_message_at_list">get_success_message_at_list()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_text_input">get_text_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_true_false_input">get_true_false_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_upload_file_input">get_upload_file_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_upload_file_readonly_input">get_upload_file_readonly_input()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_get_views_as_string">get_views_as_string()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_insert_layout">insert_layout()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_is_IE7">is_IE7()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_load_js_chosen">load_js_chosen()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_load_js_fancybox">load_js_fancybox()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_load_js_jqueryui">load_js_jqueryui()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_load_js_uploader">load_js_uploader()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_print_webpage">print_webpage()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_setThemeBasics">setThemeBasics()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_set_basic_Layout">set_basic_Layout()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_set_css">set_css()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_set_echo_and_die">set_echo_and_die()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_set_js">set_js()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_set_js_config">set_js_config()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_set_js_lib">set_js_lib()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_set_theme">set_theme()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_showAddForm">showAddForm()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_showCloneForm">showCloneForm()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_showEditForm">showEditForm()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_showList">showList()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_showListInfo">showListInfo()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_showReadForm">showReadForm()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_unset_echo_and_die">unset_echo_and_die()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_update_layout">update_layout()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_upload_layout">upload_layout()</a>, 
+			<a href="class-grocery_CRUD_Layout.html#_validation_layout">validation_layout()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-grocery_CRUD_Model_Driver.html#methods">grocery_CRUD_Model_Driver</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-grocery_CRUD_Model_Driver.html#__convert_date_to_sql_date">_convert_date_to_sql_date()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#__get_field_names_to_search">_get_field_names_to_search()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#__unique_field_name">_unique_field_name()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#__unique_join_name">_unique_join_name()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_ajax_relation">ajax_relation()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_db_delete">db_delete()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_db_insert">db_insert()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_db_insert_validation">db_insert_validation()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_db_multiple_delete">db_multiple_delete()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_db_relation_n_n_delete">db_relation_n_n_delete()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_db_relation_n_n_update">db_relation_n_n_update()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_db_update">db_update()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_db_update_validation">db_update_validation()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_delete_file">delete_file()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_filter_data_from_xss">filter_data_from_xss()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_form_validation">form_validation()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_get_clone_values">get_clone_values()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_get_edit_values">get_edit_values()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_get_list">get_list()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_get_relation_array">get_relation_array()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_get_relation_n_n_selection_array">get_relation_n_n_selection_array()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_get_relation_n_n_unselected_array">get_relation_n_n_unselected_array()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_get_relation_total_rows">get_relation_total_rows()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_get_total_results">get_total_results()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_set_ajax_list_queries">set_ajax_list_queries()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_set_basic_db_table">set_basic_db_table()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_set_default_Model">set_default_Model()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_set_model">set_model()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_table_exists">table_exists()</a>, 
+			<a href="class-grocery_CRUD_Model_Driver.html#_upload_file">upload_file()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-grocery_CRUD_Field_Types.html#methods">grocery_CRUD_Field_Types</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-grocery_CRUD_Field_Types.html#_change_list_value">change_list_value()</a>, 
+			<a href="class-grocery_CRUD_Field_Types.html#_character_limiter">character_limiter()</a>, 
+			<a href="class-grocery_CRUD_Field_Types.html#_get_field_input">get_field_input()</a>, 
+			<a href="class-grocery_CRUD_Field_Types.html#_get_field_types">get_field_types()</a>, 
+			<a href="class-grocery_CRUD_Field_Types.html#_get_primary_key">get_primary_key()</a>, 
+			<a href="class-grocery_CRUD_Field_Types.html#_get_type">get_type()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="VERSION" id="VERSION">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Grocery_CRUD.html#3556-3561" title="Go to source code"><b>VERSION</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">&quot;1.6.1&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#VERSION" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Grocery CRUD version</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Grocery CRUD version</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="JQUERY" id="JQUERY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Grocery_CRUD.html#3563" title="Go to source code"><b>JQUERY</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">&quot;jquery-1.11.1.min.js&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#JQUERY" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="JQUERY_UI_JS" id="JQUERY_UI_JS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Grocery_CRUD.html#3564" title="Go to source code"><b>JQUERY_UI_JS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">&quot;jquery-ui-1.10.3.custom.min.js&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#JQUERY_UI_JS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="JQUERY_UI_CSS" id="JQUERY_UI_CSS">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Grocery_CRUD.html#3565" title="Go to source code"><b>JQUERY_UI_CSS</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">&quot;jquery-ui-1.10.1.custom.min.css&quot;</span></code></td>
+		<td class="description"><div>
+			<a href="#JQUERY_UI_CSS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-grocery_CRUD_States.html#constants">grocery_CRUD_States</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-grocery_CRUD_States.html#STATE_ADD"><b>STATE_ADD</b></a>, 
+			<a href="class-grocery_CRUD_States.html#STATE_CLONE"><b>STATE_CLONE</b></a>, 
+			<a href="class-grocery_CRUD_States.html#STATE_DELETE"><b>STATE_DELETE</b></a>, 
+			<a href="class-grocery_CRUD_States.html#STATE_DELETE_MULTIPLE"><b>STATE_DELETE_MULTIPLE</b></a>, 
+			<a href="class-grocery_CRUD_States.html#STATE_EDIT"><b>STATE_EDIT</b></a>, 
+			<a href="class-grocery_CRUD_States.html#STATE_INSERT"><b>STATE_INSERT</b></a>, 
+			<a href="class-grocery_CRUD_States.html#STATE_LIST"><b>STATE_LIST</b></a>, 
+			<a href="class-grocery_CRUD_States.html#STATE_READ"><b>STATE_READ</b></a>, 
+			<a href="class-grocery_CRUD_States.html#STATE_UNKNOWN"><b>STATE_UNKNOWN</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="state_code" id="$state_code">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3567" title="Go to source code"><var>$state_code</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$state_code" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="state_info" id="$state_info">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3568" title="Go to source code"><var>$state_info</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$state_info" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="columns" id="$columns">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3569" title="Go to source code"><var>$columns</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$columns" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_theme" id="$default_theme">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3577" title="Go to source code"><var>$default_theme</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'flexigrid'</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_theme" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="language" id="$language">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3578" title="Go to source code"><var>$language</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$language" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="lang_strings" id="$lang_strings">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3579" title="Go to source code"><var>$lang_strings</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$lang_strings" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="php_date_format" id="$php_date_format">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3580" title="Go to source code"><var>$php_date_format</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$php_date_format" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_date_format" id="$js_date_format">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3581" title="Go to source code"><var>$js_date_format</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$js_date_format" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ui_date_format" id="$ui_date_format">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3582" title="Go to source code"><var>$ui_date_format</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$ui_date_format" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="character_limiter" id="$character_limiter">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3583" title="Go to source code"><var>$character_limiter</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$character_limiter" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="config" id="$config">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3584" title="Go to source code"><var>$config</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$config" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_fields" id="$add_fields">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3586" title="Go to source code"><var>$add_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$add_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="edit_fields" id="$edit_fields">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3587" title="Go to source code"><var>$edit_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$edit_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_fields" id="$read_fields">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3588" title="Go to source code"><var>$read_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$read_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_hidden_fields" id="$add_hidden_fields">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3589" title="Go to source code"><var>$add_hidden_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$add_hidden_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="edit_hidden_fields" id="$edit_hidden_fields">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3590" title="Go to source code"><var>$edit_hidden_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$edit_hidden_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="field_types" id="$field_types">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3591" title="Go to source code"><var>$field_types</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$field_types" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="basic_db_table" id="$basic_db_table">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3592" title="Go to source code"><var>$basic_db_table</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$basic_db_table" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="theme_config" id="$theme_config">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3593" title="Go to source code"><var>$theme_config</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$theme_config" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="subject" id="$subject">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3594" title="Go to source code"><var>$subject</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$subject" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="subject_plural" id="$subject_plural">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3595" title="Go to source code"><var>$subject_plural</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$subject_plural" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="display_as" id="$display_as">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3596" title="Go to source code"><var>$display_as</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$display_as" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="order_by" id="$order_by">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3597" title="Go to source code"><var>$order_by</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$order_by" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="where" id="$where">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3598" title="Go to source code"><var>$where</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$where" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="like" id="$like">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3599" title="Go to source code"><var>$like</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$like" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="having" id="$having">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3600" title="Go to source code"><var>$having</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$having" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="or_having" id="$or_having">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3601" title="Go to source code"><var>$or_having</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$or_having" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="limit" id="$limit">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3602" title="Go to source code"><var>$limit</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$limit" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="required_fields" id="$required_fields">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3603" title="Go to source code"><var>$required_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$required_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="_unique_fields" id="$_unique_fields">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3604" title="Go to source code"><var>$_unique_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$_unique_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="validation_rules" id="$validation_rules">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3605" title="Go to source code"><var>$validation_rules</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$validation_rules" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="relation" id="$relation">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3606" title="Go to source code"><var>$relation</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$relation" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="relation_n_n" id="$relation_n_n">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3607" title="Go to source code"><var>$relation_n_n</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$relation_n_n" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="upload_fields" id="$upload_fields">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3608" title="Go to source code"><var>$upload_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$upload_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="actions" id="$actions">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3609" title="Go to source code"><var>$actions</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$actions" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="form_validation" id="$form_validation">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3611" title="Go to source code"><var>$form_validation</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$form_validation" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="change_field_type" id="$change_field_type">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3612" title="Go to source code"><var>$change_field_type</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$change_field_type" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="primary_keys" id="$primary_keys">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3613" title="Go to source code"><var>$primary_keys</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$primary_keys" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="crud_url_path" id="$crud_url_path">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3614" title="Go to source code"><var>$crud_url_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$crud_url_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="list_url_path" id="$list_url_path">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3615" title="Go to source code"><var>$list_url_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$list_url_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_texteditor" id="$unset_texteditor">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3618" title="Go to source code"><var>$unset_texteditor</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$unset_texteditor" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_add" id="$unset_add">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3619" title="Go to source code"><var>$unset_add</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_add" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_edit" id="$unset_edit">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3620" title="Go to source code"><var>$unset_edit</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_edit" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_delete" id="$unset_delete">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3621" title="Go to source code"><var>$unset_delete</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_delete" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_read" id="$unset_read">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3622" title="Go to source code"><var>$unset_read</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_read" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_jquery" id="$unset_jquery">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3623" title="Go to source code"><var>$unset_jquery</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_jquery" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_jquery_ui" id="$unset_jquery_ui">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3624" title="Go to source code"><var>$unset_jquery_ui</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_jquery_ui" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_bootstrap" id="$unset_bootstrap">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3625" title="Go to source code"><var>$unset_bootstrap</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_bootstrap" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_list" id="$unset_list">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3626" title="Go to source code"><var>$unset_list</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_list" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_export" id="$unset_export">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3627" title="Go to source code"><var>$unset_export</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_export" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_print" id="$unset_print">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3628" title="Go to source code"><var>$unset_print</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_print" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_back_to_list" id="$unset_back_to_list">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3629" title="Go to source code"><var>$unset_back_to_list</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_back_to_list" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_clone" id="$unset_clone">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3630" title="Go to source code"><var>$unset_clone</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">false</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_clone" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_columns" id="$unset_columns">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3631" title="Go to source code"><var>$unset_columns</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_columns" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_add_fields" id="$unset_add_fields">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3632" title="Go to source code"><var>$unset_add_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_add_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_edit_fields" id="$unset_edit_fields">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3633" title="Go to source code"><var>$unset_edit_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_edit_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_clone_fields" id="$unset_clone_fields">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3634" title="Go to source code"><var>$unset_clone_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_clone_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="unset_read_fields" id="$unset_read_fields">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3635" title="Go to source code"><var>$unset_read_fields</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$unset_read_fields" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_insert" id="$callback_before_insert">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3638" title="Go to source code"><var>$callback_before_insert</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_before_insert" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_insert" id="$callback_after_insert">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3639" title="Go to source code"><var>$callback_after_insert</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_after_insert" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_insert" id="$callback_insert">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3640" title="Go to source code"><var>$callback_insert</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_insert" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_update" id="$callback_before_update">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3641" title="Go to source code"><var>$callback_before_update</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_before_update" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_update" id="$callback_after_update">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3642" title="Go to source code"><var>$callback_after_update</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_after_update" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_update" id="$callback_update">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3643" title="Go to source code"><var>$callback_update</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_update" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_delete" id="$callback_before_delete">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3644" title="Go to source code"><var>$callback_before_delete</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_before_delete" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_delete" id="$callback_after_delete">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3645" title="Go to source code"><var>$callback_after_delete</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_after_delete" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_delete" id="$callback_delete">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3646" title="Go to source code"><var>$callback_delete</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_delete" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_clone" id="$callback_before_clone">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3647" title="Go to source code"><var>$callback_before_clone</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_before_clone" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_clone" id="$callback_after_clone">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3648" title="Go to source code"><var>$callback_after_clone</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_after_clone" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_clone" id="$callback_clone">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3649" title="Go to source code"><var>$callback_clone</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_clone" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_column" id="$callback_column">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3650" title="Go to source code"><var>$callback_column</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$callback_column" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_add_field" id="$callback_add_field">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3651" title="Go to source code"><var>$callback_add_field</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$callback_add_field" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_edit_field" id="$callback_edit_field">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3652" title="Go to source code"><var>$callback_edit_field</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$callback_edit_field" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_read_field" id="$callback_read_field">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3653" title="Go to source code"><var>$callback_read_field</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$callback_read_field" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_clone_field" id="$callback_clone_field">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3654" title="Go to source code"><var>$callback_clone_field</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$callback_clone_field" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_upload" id="$callback_upload">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3655" title="Go to source code"><var>$callback_upload</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_upload" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_before_upload" id="$callback_before_upload">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3656" title="Go to source code"><var>$callback_before_upload</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_before_upload" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="callback_after_upload" id="$callback_after_upload">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3657" title="Go to source code"><var>$callback_after_upload</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$callback_after_upload" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_javascript_path" id="$default_javascript_path">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3659" title="Go to source code"><var>$default_javascript_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_javascript_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_css_path" id="$default_css_path">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3660" title="Go to source code"><var>$default_css_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_css_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_texteditor_path" id="$default_texteditor_path">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3661" title="Go to source code"><var>$default_texteditor_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_texteditor_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_theme_path" id="$default_theme_path">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3662" title="Go to source code"><var>$default_theme_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_theme_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_language_path" id="$default_language_path">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3663" title="Go to source code"><var>$default_language_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'assets/grocery_crud/languages'</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_language_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_config_path" id="$default_config_path">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3664" title="Go to source code"><var>$default_config_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'assets/grocery_crud/config'</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_config_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="default_assets_path" id="$default_assets_path">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Grocery_CRUD.html#3665" title="Go to source code"><var>$default_assets_path</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">'assets/grocery_crud'</span></code></td>
+		<td class="description"><div>
+			<a href="#$default_assets_path" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-grocery_CRUD_States.html#properties">grocery_CRUD_States</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-grocery_CRUD_States.html#$states"><var>$states</var></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-grocery_CRUD_Layout.html#properties">grocery_CRUD_Layout</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-grocery_CRUD_Layout.html#$css_files"><var>$css_files</var></a>, 
+			<a href="class-grocery_CRUD_Layout.html#$default_true_false_text"><var>$default_true_false_text</var></a>, 
+			<a href="class-grocery_CRUD_Layout.html#$js_config_files"><var>$js_config_files</var></a>, 
+			<a href="class-grocery_CRUD_Layout.html#$js_files"><var>$js_files</var></a>, 
+			<a href="class-grocery_CRUD_Layout.html#$js_lib_files"><var>$js_lib_files</var></a>, 
+			<a href="class-grocery_CRUD_Layout.html#$theme"><var>$theme</var></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-grocery_CRUD_Model_Driver.html#properties">grocery_CRUD_Model_Driver</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-grocery_CRUD_Model_Driver.html#$basic_model"><var>$basic_model</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Tienda API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
